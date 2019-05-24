@@ -1,0 +1,979 @@
+{
+    "lastModified": 1549730100000,
+    "name": "Cretan",
+    "realm": "Whisperwind",
+    "battlegroup": "Rampage",
+    "class": 11,
+    "race": 28,
+    "gender": 0,
+    "level": 120,
+    "achievementPoints": 13185,
+    "thumbnail": "whisperwind/117/36199797-avatar.jpg",
+    "calcClass": "U",
+    "faction": 1,
+    "items": {
+        "averageItemLevel": 388,
+        "averageItemLevelEquipped": 377,
+        "head": {
+            "id": 157913,
+            "name": "Gonk Outrunner Mask",
+            "icon": "inv_helm_leather_zandalarquest_b_01",
+            "quality": 4,
+            "itemLevel": 390,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 73,
+                    "amount": 655
+                },
+                {
+                    "stat": 7,
+                    "amount": 1189
+                }
+            ],
+            "armor": 262,
+            "context": "world-quest-4",
+            "bonusLists": [
+                1577,
+                4786,
+                5414
+            ],
+            "artifactId": 0,
+            "displayInfoId": 165096,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": [
+                    {
+                        "id": 13,
+                        "tier": 0,
+                        "spellId": 263978,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 84,
+                        "tier": 1,
+                        "spellId": 268595,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 38,
+                        "tier": 2,
+                        "spellId": 267879,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 157,
+                        "tier": 3,
+                        "spellId": 273790,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 364,
+                        "tier": 4,
+                        "spellId": 279642,
+                        "bonusListId": 0
+                    }
+                ]
+            }
+        },
+        "neck": {
+            "id": 158075,
+            "name": "Heart of Azeroth",
+            "icon": "inv_heartofazeroth",
+            "quality": 6,
+            "itemLevel": 399,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 32,
+                    "amount": 261
+                },
+                {
+                    "stat": 49,
+                    "amount": 261
+                },
+                {
+                    "stat": 36,
+                    "amount": 261
+                },
+                {
+                    "stat": 7,
+                    "amount": 363
+                },
+                {
+                    "stat": 71,
+                    "amount": 210
+                }
+            ],
+            "armor": 0,
+            "context": "quest-reward",
+            "bonusLists": [
+                4936,
+                4929,
+                4930
+            ],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {},
+            "azeriteItem": {
+                "azeriteLevel": 38,
+                "azeriteExperience": 13791,
+                "azeriteExperienceRemaining": 38557
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "shoulder": {
+            "id": 166553,
+            "name": "Deathstalker's Shoulderpads",
+            "icon": "inv_leather_warfrontsforsakenmythic_d_01shoulder",
+            "quality": 4,
+            "itemLevel": 390,
+            "tooltipParams": {
+                "transmogItem": 134112,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 73,
+                    "amount": 491
+                },
+                {
+                    "stat": 7,
+                    "amount": 892
+                }
+            ],
+            "armor": 242,
+            "context": "raid-mythic",
+            "bonusLists": [
+                5126,
+                1502,
+                4786,
+                5403
+            ],
+            "artifactId": 0,
+            "displayInfoId": 177381,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 134112,
+                "itemAppearanceModId": 3,
+                "transmogItemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": [
+                    {
+                        "id": 13,
+                        "tier": 0,
+                        "spellId": 263978,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 15,
+                        "tier": 1,
+                        "spellId": 263962,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 22,
+                        "tier": 2,
+                        "spellId": 263987,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 526,
+                        "tier": 3,
+                        "spellId": 287662,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 0,
+                        "tier": 4,
+                        "spellId": 0,
+                        "bonusListId": 0
+                    }
+                ]
+            }
+        },
+        "back": {
+            "id": 165924,
+            "name": "High Tinker's Cape",
+            "icon": "inv_plate_zuldazarraid_d_01_cape",
+            "quality": 4,
+            "itemLevel": 385,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 32,
+                    "amount": 92
+                },
+                {
+                    "stat": 49,
+                    "amount": 45
+                },
+                {
+                    "stat": 71,
+                    "amount": 185
+                },
+                {
+                    "stat": 7,
+                    "amount": 312
+                },
+                {
+                    "stat": 63,
+                    "amount": 59
+                }
+            ],
+            "armor": 92,
+            "context": "raid-normal",
+            "bonusLists": [
+                4798,
+                40,
+                1507,
+                4786
+            ],
+            "artifactId": 0,
+            "displayInfoId": 177108,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "chest": {
+            "id": 161456,
+            "name": "Doom's Howl Vest",
+            "icon": "inv_leather_warfrontshorde_d_01_chest",
+            "quality": 4,
+            "itemLevel": 375,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 73,
+                    "amount": 569
+                },
+                {
+                    "stat": 7,
+                    "amount": 1012
+                }
+            ],
+            "armor": 291,
+            "context": "raid-normal",
+            "bonusLists": [
+                5120,
+                1492,
+                4786,
+                5398
+            ],
+            "artifactId": 0,
+            "displayInfoId": 168854,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": [
+                    {
+                        "id": 13,
+                        "tier": 0,
+                        "spellId": 263978,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 15,
+                        "tier": 1,
+                        "spellId": 263962,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 462,
+                        "tier": 2,
+                        "spellId": 266936,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 241,
+                        "tier": 3,
+                        "spellId": 275906,
+                        "bonusListId": 0
+                    },
+                    {
+                        "id": 0,
+                        "tier": 4,
+                        "spellId": 0,
+                        "bonusListId": 0
+                    }
+                ]
+            }
+        },
+        "shirt": {
+            "id": 89195,
+            "name": "Artisan Officer's Shirt",
+            "icon": "inv_shirt03_epic",
+            "quality": 4,
+            "itemLevel": 1,
+            "tooltipParams": {
+                "transmogItem": 142503,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [],
+            "armor": 0,
+            "context": "vendor",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 121177,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 142503,
+                "itemAppearanceModId": 0,
+                "transmogItemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "wrist": {
+            "id": 165479,
+            "name": "Deathstalker's Bindings",
+            "icon": "inv_leather_warfrontsforsaken_d_01bracer",
+            "quality": 4,
+            "itemLevel": 385,
+            "tooltipParams": {
+                "enchant": 5971,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 32,
+                    "amount": 66
+                },
+                {
+                    "stat": 73,
+                    "amount": 185
+                },
+                {
+                    "stat": 36,
+                    "amount": 72
+                },
+                {
+                    "stat": 7,
+                    "amount": 312
+                }
+            ],
+            "armor": 136,
+            "context": "raid-mythic",
+            "bonusLists": [
+                5126,
+                1502,
+                4786
+            ],
+            "artifactId": 0,
+            "displayInfoId": 175918,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "enchantDisplayInfoId": 5971,
+                "itemAppearanceModId": 3
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "hands": {
+            "id": 165514,
+            "name": "Gloves of Spiritual Grace",
+            "icon": "inv_glove_leather_zuldazarraid_d_01",
+            "quality": 4,
+            "itemLevel": 390,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 32,
+                    "amount": 118
+                },
+                {
+                    "stat": 73,
+                    "amount": 258
+                },
+                {
+                    "stat": 36,
+                    "amount": 70
+                },
+                {
+                    "stat": 7,
+                    "amount": 439
+                }
+            ],
+            "armor": 201,
+            "context": "raid-normal",
+            "bonusLists": [
+                4798,
+                1512,
+                4783
+            ],
+            "artifactId": 0,
+            "displayInfoId": 176566,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "waist": {
+            "id": 165525,
+            "name": "Stretched Sinew Waistcord",
+            "icon": "inv_belt_leather_zuldazarraid_d_01",
+            "quality": 4,
+            "itemLevel": 385,
+            "tooltipParams": {
+                "gem0": 154127,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 32,
+                    "amount": 80
+                },
+                {
+                    "stat": 73,
+                    "amount": 247
+                },
+                {
+                    "stat": 49,
+                    "amount": 104
+                },
+                {
+                    "stat": 7,
+                    "amount": 417
+                }
+            ],
+            "armor": 175,
+            "context": "raid-normal",
+            "bonusLists": [
+                4798,
+                1808,
+                1507,
+                4786
+            ],
+            "artifactId": 0,
+            "displayInfoId": 176549,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "legs": {
+            "id": 163943,
+            "name": "Neleimour's Patterned Leggings",
+            "icon": "inv_pants_leather_42v1",
+            "quality": 4,
+            "itemLevel": 370,
+            "tooltipParams": {
+                "transmogItem": 138333,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 32,
+                    "amount": 105
+                },
+                {
+                    "stat": 73,
+                    "amount": 286
+                },
+                {
+                    "stat": 36,
+                    "amount": 125
+                },
+                {
+                    "stat": 62,
+                    "amount": 99
+                },
+                {
+                    "stat": 7,
+                    "amount": 473
+                }
+            ],
+            "armor": 247,
+            "context": "world-quest-12",
+            "bonusLists": [
+                41,
+                1492,
+                4784
+            ],
+            "artifactId": 0,
+            "displayInfoId": 73840,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 138333,
+                "itemAppearanceModId": 0,
+                "transmogItemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "feet": {
+            "id": 165520,
+            "name": "Silent Pillager's Footpads",
+            "icon": "inv_boot_leather_zuldazarraid_d_01",
+            "quality": 4,
+            "itemLevel": 395,
+            "tooltipParams": {
+                "gem0": 154127,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 40,
+                    "amount": 79
+                },
+                {
+                    "stat": 73,
+                    "amount": 270
+                },
+                {
+                    "stat": 49,
+                    "amount": 112
+                },
+                {
+                    "stat": 7,
+                    "amount": 462
+                }
+            ],
+            "armor": 229,
+            "context": "raid-normal",
+            "bonusLists": [
+                4798,
+                1808,
+                1517,
+                4783
+            ],
+            "artifactId": 0,
+            "displayInfoId": 176563,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemAppearanceModId": 0
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "finger1": {
+            "id": 165683,
+            "name": "Seal of Dath'Remar",
+            "icon": "inv_70_quest_ring10d",
+            "quality": 4,
+            "itemLevel": 385,
+            "tooltipParams": {
+                "enchant": 5943,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 36,
+                    "amount": 234
+                },
+                {
+                    "stat": 32,
+                    "amount": 197
+                },
+                {
+                    "stat": 7,
+                    "amount": 312
+                }
+            ],
+            "armor": 0,
+            "context": "world-quest-4",
+            "bonusLists": [
+                4803,
+                1577,
+                4786
+            ],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "enchantDisplayInfoId": 5943
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "finger2": {
+            "id": 166559,
+            "name": "Commander's Signet of Battle",
+            "icon": "inv_jewelry_ring_178",
+            "quality": 4,
+            "itemLevel": 395,
+            "tooltipParams": {
+                "enchant": 5943,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 36,
+                    "amount": 250
+                },
+                {
+                    "stat": 32,
+                    "amount": 199
+                },
+                {
+                    "stat": 7,
+                    "amount": 348
+                }
+            ],
+            "armor": 0,
+            "context": "vendor",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "enchantDisplayInfoId": 5943
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "trinket1": {
+            "id": 159128,
+            "name": "Darkmoon Deck: Blockades",
+            "icon": "inv_inscription_80_deck_blockades",
+            "quality": 4,
+            "itemLevel": 355,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 72,
+                    "amount": 236
+                }
+            ],
+            "armor": 0,
+            "context": "trade-skill",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {},
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "trinket2": {
+            "id": 165667,
+            "name": "Razzashi Tooth Medallion",
+            "icon": "trade_archaeology_orc_artifactfragment",
+            "quality": 4,
+            "itemLevel": 335,
+            "tooltipParams": {
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 3,
+                    "amount": 196
+                }
+            ],
+            "armor": 0,
+            "context": "world-quest-1",
+            "bonusLists": [
+                4803,
+                1527,
+                4784
+            ],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {},
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        },
+        "mainHand": {
+            "id": 163965,
+            "name": "Glave's Angular Glaive",
+            "icon": "inv_polearm_2h_pvpdraenors2_d_01",
+            "quality": 4,
+            "itemLevel": 350,
+            "tooltipParams": {
+                "gem0": 154129,
+                "transmogItem": 128821,
+                "timewalkerLevel": 120,
+                "azeritePower0": 0,
+                "azeritePower1": 0,
+                "azeritePower2": 0,
+                "azeritePower3": 0,
+                "azeritePowerLevel": 0,
+                "azeritePower4": 0
+            },
+            "stats": [
+                {
+                    "stat": 40,
+                    "amount": 117
+                },
+                {
+                    "stat": 49,
+                    "amount": 93
+                },
+                {
+                    "stat": 3,
+                    "amount": 237
+                },
+                {
+                    "stat": 7,
+                    "amount": 383
+                }
+            ],
+            "armor": 0,
+            "weaponInfo": {
+                "damage": {
+                    "min": 449,
+                    "max": 835,
+                    "exactMin": 449.0,
+                    "exactMax": 835.0
+                },
+                "weaponSpeed": 3.6,
+                "dps": 178.33334
+            },
+            "context": "world-quest-12",
+            "bonusLists": [
+                4802,
+                1472,
+                4786
+            ],
+            "artifactId": 0,
+            "displayInfoId": 140862,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 128821,
+                "itemAppearanceModId": 0,
+                "transmogItemAppearanceModId": 19
+            },
+            "azeriteItem": {
+                "azeriteLevel": 0,
+                "azeriteExperience": 0,
+                "azeriteExperienceRemaining": 0
+            },
+            "azeriteEmpoweredItem": {
+                "azeritePowers": []
+            }
+        }
+    },
+    "totalHonorableKills": 13435
+}
