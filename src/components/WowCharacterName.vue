@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import globals from "../services/globals";
+import globals from "../data/globals";
 
 export default {
   props: {

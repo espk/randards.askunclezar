@@ -20,7 +20,7 @@
         <div class="float-right">
           <input type="text" placeholder="character" v-model="character">
           <input type="text" placeholder="realm " v-model="realm">
-          <button @click="loadCharacter()">Load Character</button>
+          <button @click="addCharacter()">Load Character</button>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@
     </div>
     <div class="waiting-panel" v-if="loadState.loading">
         <div class="waiting-spinner">
-          <h4><span>{{ currentFlavortext }}</span></h4>
+          <h4><span>{{ currentFlavorText }}</span></h4>
           <img src="/img/green-spin.gif" height="64" width="64">
           <div>Loading {{ loadState.loadingCount }} characters</div>
         </div>
@@ -151,65 +151,44 @@
 </template>
 
 <script>
-import armory from "../services/armory";
-import WowCharacter from "./WowCharacter";
+import store from '../data/store'
+import WowCharacter from "./WowCharacter"
+import { mapState } from 'vuex'
 
 export default {
   name: "AskUncleZar",
   components: {
     WowCharacter: WowCharacter
   },
+  store,
   data: function() {
     return {
-      raid: {},
-      orderedKeys: [],
-      statistics: {},
-      loadState: { loading: true, loadingCount: 0 },
-
       character: '',
-      realm: '',
-
-      flavorText: [
-        'rolling tranq...',
-        'afk steak...',
-        'looking up alcohol pics on discord...',
-        'blaming Randy...',
-        'herding cats...'
-      ],
-
-      currentFlavortext: ''
+      realm: ''
     };
   },
-  computed: {
-    
-
-  },
+  computed: mapState([ 'raid', 'loadState', 'currentFlavorText' ]),
   methods: {
     loadRaid: function() {
-      this.shuffleText()
-      armory.getCurrentRaid()
+      this.$store.commit('shuffleText')
+      this.$store.dispatch('getCurrentRaid')
     },
-    loadCharacter: function() {
-      this.shuffleText()
-      armory.loadSingleCharacter(this.character, this.realm)
+    addCharacter: function() {
+      this.$store.commit('shuffleText')
+      this.$store.dispatch('loadSingleCharacter', { character: this.character, realm: this.realm })
+
       this.character = ""
       this.realm = ""
     },
-    shuffleText: function() {
-      var selection = Math.floor(Math.random() * Math.floor(this.flavorText.length))
-      this.currentFlavortext = this.flavorText[selection]
-    },
+    
     handleRemoveCharacter: function(character) {
-      armory.removeCharacter(character)
+      this.$store.commit('removeCharacter', character)
     }
   },
   mounted: function() {
-    this.raid = armory.data
-    this.loadState = armory.loadState
-
-    armory.pingHeartbeat()
+    this.$store.dispatch('pingApi')
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

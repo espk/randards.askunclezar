@@ -38,7 +38,6 @@ export default {
     WowCharacter: Object
   },
   mounted() {
-    //console.log(this.toon);
   },
   computed: {
     itemLevelClass: function() {
