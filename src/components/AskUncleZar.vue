@@ -18,8 +18,8 @@
           <button @click="loadRaid()">Load Raid Members</button>
         </div>
         <div class="float-right">
-          <input type="text" placeholder="character" v-model="character">
-          <input type="text" placeholder="realm " v-model="realm">
+          <input type="text" placeholder="character" v-model="character" />
+          <input type="text" placeholder="realm " v-model="realm" />
           <button @click="addCharacter()">Load Character</button>
         </div>
       </div>
@@ -133,27 +133,57 @@
             </tr>
           </thead>
           <tbody v-for="WowCharacter in raid" v-bind:key="WowCharacter.id">
-            <wow-character v-bind:wow-character="WowCharacter" @removeCharacter="handleRemoveCharacter" />
+            <wow-character
+              v-bind:wow-character="WowCharacter"
+              @removeCharacter="handleRemoveCharacter"
+            />
           </tbody>
         </table>
       </div>
-      
-    </div>
-    <div class="waiting-panel" v-if="loadState.loading">
-        <div class="waiting-spinner">
-          <h4><span>{{ currentFlavorText }}</span></h4>
-          <img src="/img/green-spin.gif" height="64" width="64">
-          <div>Loading {{ loadState.loadingCount }} characters</div>
+      <div class="application-container">
+        <div class="grid-container">
+          <div class="grid-group grid-head">
+            <div class="grid-item grid-character">name</div>
+            <div class="grid-item grid-equipped-ilvl">equipped</div>
+            <div class="grid-item grid-overall-ilvl">max</div>
+            <div class="grid-item grid-head">head</div>
+            <div class="grid-item grid-neck">neck</div>
+            <div class="grid-item grid-shoulders">shoulders</div>
+            <div class="grid-item grid-back">back</div>
+            <div class="grid-item grid-chest">chest</div>
+            <div class="grid-item grid-wrist">wrist</div>
+            <div class="grid-item grid-hands">hands</div>
+            <div class="grid-item grid-waist">waist</div>
+            <div class="grid-item grid-legs">legs</div>
+            <div class="grid-item grid-feet">feet</div>
+            <div class="grid-item grid-ring1">ring 1</div>
+            <div class="grid-item grid-ring2">ring 2</div>
+            <div class="grid-item grid-trinket1">trinket 1</div>
+            <div class="grid-item grid-trinket2">trinket 2</div>
+            <div class="grid-item grid-main-hand">main hand</div>
+            <div class="grid-item grid-off-hand">off hand</div>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="waiting-panel" v-if="loadState.loading">
+      <div class="waiting-spinner">
+        <h4>
+          <span>{{ currentFlavorText }}</span>
+        </h4>
+        <img src="/img/green-spin.gif" height="64" width="64" />
+        <div>Loading {{ loadState.loadingCount }} characters</div>
+      </div>
+    </div>
+    <button class="sns-button" @click="loadSns()">Load SnS Members</button>
     <footer></footer>
   </div>
 </template>
 
 <script>
-import store from '../data/store'
-import WowCharacter from "./WowCharacter"
-import { mapState } from 'vuex'
+import store from "../data/store";
+import WowCharacter from "./WowCharacter";
+import { mapState } from "vuex";
 
 export default {
   name: "AskUncleZar",
@@ -163,32 +193,39 @@ export default {
   store,
   data: function() {
     return {
-      character: '',
-      realm: ''
+      character: "",
+      realm: ""
     };
   },
-  computed: mapState([ 'raid', 'loadState', 'currentFlavorText' ]),
+  computed: mapState(["raid", "loadState", "currentFlavorText"]),
   methods: {
+    loadSns: function() {
+      this.$store.commit("shuffleText");
+      this.$store.dispatch("getSnS");
+    },
     loadRaid: function() {
-      this.$store.commit('shuffleText')
-      this.$store.dispatch('getCurrentRaid')
+      this.$store.commit("shuffleText");
+      this.$store.dispatch("getCurrentRaid");
     },
     addCharacter: function() {
-      this.$store.commit('shuffleText')
-      this.$store.dispatch('loadSingleCharacter', { character: this.character, realm: this.realm })
+      this.$store.commit("shuffleText");
+      this.$store.dispatch("loadSingleCharacter", {
+        character: this.character,
+        realm: this.realm
+      });
 
-      this.character = ""
-      this.realm = ""
+      this.character = "";
+      this.realm = "";
     },
-    
+
     handleRemoveCharacter: function(character) {
-      this.$store.commit('removeCharacter', character)
+      this.$store.commit("removeCharacter", character);
     }
   },
   mounted: function() {
-    this.$store.dispatch('pingApi')
+    this.$store.dispatch("pingApi");
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -229,11 +266,11 @@ a {
   background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
 }
 #header:after {
-    top: 40px;
-    background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.2));
-    background: -moz-linear-gradient(transparent, rgba(0,0,0,0.2));
-    background: -ms-linear-gradient(transparent, rgba(0,0,0,0.2));
-    background: linear-gradient(transparent, rgba(0,0,0,0.2));
+  top: 40px;
+  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  background: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  background: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
 #header-outer {
   height: 100%;
@@ -329,5 +366,33 @@ a {
 }
 footer {
   height: 100px;
+}
+.sns-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container .grid-group {
+  display: grid;
+  grid-template-columns: 10% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+}
+
+.grid-group {
+  border: 1px solid #333;
+}
+.grid-group .grid-item {
+  height: 100px;
+  transform: translate(5px, 10px) rotate(315deg);
+  text-align: left;
+  white-space: nowrap;
+}
+.grid-group .grid-item.grid-character {
+  transform: none;
+  margin-top: 34px;
 }
 </style>

@@ -78,7 +78,7 @@ export default new Vuex.Store({
         state.statistics.max = state.statistics.datapoints[state.statistics.datapoints.length - 1]
     
         var count = state.statistics.datapoints.length
-        var oulierLength = Math.floor(count * 0.1)
+        var oulierLength = Math.floor(count * 0.15)
 
         state.statistics.curveBottom = state.statistics.datapoints[oulierLength]
         state.statistics.curveTop = state.statistics.datapoints[count - oulierLength]
@@ -98,6 +98,13 @@ export default new Vuex.Store({
         context.commit('clearData')
     
         currentRaid.forEach(member => {
+          context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
+        });
+      },
+      getSnS(context) {
+        //context.commit('clearData')
+    
+        sns.forEach(member => {
           context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
         });
       },
@@ -134,12 +141,11 @@ export default new Vuex.Store({
         character.items = {...character.items, averageItemLevelEquippedPercentile: this.getPercentileForItemLevel(state, character.items.averageItemLevelEquipped) }
         
         nonOffHandEquipmentSlots.forEach(slot => {
-          character.items[slot].itemLevelPercentile = this.getPercentileForItemLevel(state, character.items[slot].itemLevel)
+          character.items[slot] = {...character.items[slot], itemLevelPercentile: this.getPercentileForItemLevel(state, character.items[slot].itemLevel)}
         });
   
         if (character.items.offHand) 
-          character.items.offHand.itemLevelPercentile = this.getPercentileForItemLevel(state, character.items.offHand.itemLevel)
-  
+          character.items.offHand = {...character.items.offHand, itemLevelPercentile: this.getPercentileForItemLevel(state, character.items.offHand.itemLevel)} 
       })
     },
   
@@ -172,15 +178,7 @@ export default new Vuex.Store({
     realm: 'Dentarg'
   },
   {
-    name: 'Tehx',
-    realm: 'Whisperwind'
-  },
-  {
     name: 'Khajitzak',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Tavalilyn',
     realm: 'Whisperwind'
   },
   {
@@ -212,11 +210,11 @@ export default new Vuex.Store({
     realm: 'Dentarg'
   },
   {
-    name: 'Gorht',
-    realm: 'Whisperwind'
+    name: 'Delynarra',
+    realm: 'Dentarg'
   },
   {
-    name: 'Mowglii',
+    name: 'Missmoe',
     realm: 'Whisperwind'
   },
   {
@@ -233,6 +231,87 @@ export default new Vuex.Store({
   },
   {
     name: 'Zarjani',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Dutchgirl',
+    realm: 'Whisperwind'
+  }
+
+]
+
+const sns = [
+  
+  {
+    name: 'Fairybútt',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Drsquishy',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Èspi',
+    realm: 'Dentarg'
+  },
+  {
+    name: 'Foxkreig',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Lindseysdad',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Lucrelucia',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Ossil',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Pandacia',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Senzecoure',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Tredecim',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Tredici',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Tòph',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Wightknight',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Zauberr',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Ildanas',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Zogwert',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Smittius',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Ursius',
     realm: 'Whisperwind'
   }
 ]
