@@ -1,5 +1,5 @@
 <template>
-  <td class="column-name">
+  <div class="column-name">
     <div v-bind:style="{ color: characterClass }">
       {{WowCharacter.name}}
       <button
@@ -8,7 +8,7 @@
       >+</button>
     </div>
     <div class="realm">{{WowCharacter.realm}}</div>
-  </td>
+  </div>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     characterClass: function() {
-      var item = globals.classes.filter((element) => {
+      var item = globals.classes.filter(element => {
         return element.id === this.WowCharacter.class;
       });
 
@@ -29,11 +29,10 @@ export default {
   },
   mounted() {
     //console.log(this.toon);
-
   },
   methods: {
     removeToon: function() {
-      this.$emit('childRemoveCharacter', this.WowCharacter)
+      this.$emit("childRemoveCharacter", this.WowCharacter);
     }
   }
 };

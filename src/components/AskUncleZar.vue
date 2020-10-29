@@ -1,172 +1,58 @@
 <template>
-  <div>
-    <header id="header">
-      <div id="header-outer" class="outer row">
-        <div id="header-title" class="inner">
-          <h1 id="logo-wrap">randards.com</h1>
-          <h2 id="subtitle-wrap">do you meet randy's standards?</h2>
-        </div>
-        <div id="header-app-title" class="inner">
-          <h2>Ask Uncle Zar</h2>
-          <h3>Ask Aunt Luci</h3>
-        </div>
-      </div>
-    </header>
-    <div class="application row">
+  <div class="yellow-to-green">
+    <div class="group">
       <div class="contol-area">
-        <div class="float-left">
+        <div class="load-raid">
           <button @click="loadRaid()">Load Raid Members</button>
         </div>
-        <div class="float-right">
+        <div class="spacer">&nbsp;</div>
+        <div class="character-input">
           <input type="text" placeholder="character" v-model="character" />
-          <input type="text" placeholder="realm " v-model="realm" />
+        </div>
+        <div class="realm-input">
+          <input type="text" placeholder="realm" v-model="realm" />
+        </div>
+        <div class="load-button">
           <button @click="addCharacter()">Load Character</button>
         </div>
       </div>
     </div>
-    <div class="application row">
-      <div>
-        <table class="gear-table table-header-rotated yellow-to-green">
-          <thead>
-            <tr>
-              <th class="header-name">
-                <div>
-                  <span>name</span>
-                </div>
-              </th>
-              <th></th>
-              <th>
-                <div>
-                  <span>
-                    <button type="button">equipped</button>
-                  </span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>
-                    <button type="button">max</button>
-                  </span>
-                </div>
-              </th>
-              <th></th>
-              <th>
-                <div>
-                  <span>head</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>neck</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>shoulders</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>back</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>chest</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>wrists</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>hands</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>waist</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>legs</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>feet</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>ring 1</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>ring 2</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>trinket 1</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>trinket 2</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>main hand</span>
-                </div>
-              </th>
-              <th>
-                <div>
-                  <span>off hand</span>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody v-for="WowCharacter in raid" v-bind:key="WowCharacter.id">
+    <div class="group">
+      <div class="application-container">
+        <div class="grid-container">
+          <div class="grid-header">
+            <div class="grid-item grid-character">name</div>
+            <div class="grid-item grid-equipped-ilvl"><span class="header-text">equipped</span></div>
+            <div class="grid-item grid-overall-ilvl"><span class="header-text">max</span></div>
+            <div class="grid-item grid-head"><span class="header-text">head</span></div>
+            <div class="grid-item grid-neck"><span class="header-text">neck</span></div>
+            <div class="grid-item grid-shoulders"><span class="header-text">shoulders</span></div>
+            <div class="grid-item grid-back"><span class="header-text">back</span></div>
+            <div class="grid-item grid-chest"><span class="header-text">chest</span></div>
+            <div class="grid-item grid-wrist"><span class="header-text">wrist</span></div>
+            <div class="grid-item grid-hands"><span class="header-text">hands</span></div>
+            <div class="grid-item grid-waist"><span class="header-text">waist</span></div>
+            <div class="grid-item grid-legs"><span class="header-text">legs</span></div>
+            <div class="grid-item grid-feet"><span class="header-text">feet</span></div>
+            <div class="grid-item grid-ring1"><span class="header-text">ring 1</span></div>
+            <div class="grid-item grid-ring2"><span class="header-text">ring 2</span></div>
+            <div class="grid-item grid-trinket1"><span class="header-text">trinket 1</span></div>
+            <div class="grid-item grid-trinket2"><span class="header-text">trinket 2</span></div>
+            <div class="grid-item grid-main-hand"><span class="header-text">main hand</span></div>
+            <div class="grid-item grid-off-hand"><span class="header-text">off hand</span></div>
+          </div>
+          <div
+            v-for="WowCharacter in raid"
+            v-bind:key="WowCharacter.id"
+            class="details-container"
+          >
             <wow-character
               v-bind:wow-character="WowCharacter"
               @removeCharacter="handleRemoveCharacter"
             />
-          </tbody>
-        </table>
-      </div>
-      <!--
-      <div class="application-container">
-        <div class="grid-container">
-          <div class="grid-group grid-head">
-            <div class="grid-item grid-character">name</div>
-            <div class="grid-item grid-equipped-ilvl">equipped</div>
-            <div class="grid-item grid-overall-ilvl">max</div>
-            <div class="grid-item grid-head">head</div>
-            <div class="grid-item grid-neck">neck</div>
-            <div class="grid-item grid-shoulders">shoulders</div>
-            <div class="grid-item grid-back">back</div>
-            <div class="grid-item grid-chest">chest</div>
-            <div class="grid-item grid-wrist">wrist</div>
-            <div class="grid-item grid-hands">hands</div>
-            <div class="grid-item grid-waist">waist</div>
-            <div class="grid-item grid-legs">legs</div>
-            <div class="grid-item grid-feet">feet</div>
-            <div class="grid-item grid-ring1">ring 1</div>
-            <div class="grid-item grid-ring2">ring 2</div>
-            <div class="grid-item grid-trinket1">trinket 1</div>
-            <div class="grid-item grid-trinket2">trinket 2</div>
-            <div class="grid-item grid-main-hand">main hand</div>
-            <div class="grid-item grid-off-hand">off hand</div>
           </div>
         </div>
       </div>
-      -->
     </div>
     <div class="waiting-panel" v-if="loadState.loading">
       <div class="waiting-spinner">
@@ -190,48 +76,52 @@ import { mapState } from "vuex";
 export default {
   name: "AskUncleZar",
   components: {
-    WowCharacter: WowCharacter
+    WowCharacter: WowCharacter,
   },
   store,
-  data: function() {
+  data: function () {
     return {
       character: "",
-      realm: ""
+      realm: "",
     };
   },
   computed: mapState(["raid", "loadState", "currentFlavorText"]),
   methods: {
-    loadSns: function() {
+    loadSns: function () {
       this.$store.commit("shuffleText");
       this.$store.dispatch("getSnS");
     },
-    loadRaid: function() {
+    loadRaid: function () {
       this.$store.commit("shuffleText");
       this.$store.dispatch("getCurrentRaid");
     },
-    addCharacter: function() {
+    addCharacter: function () {
       this.$store.commit("shuffleText");
       this.$store.dispatch("loadSingleCharacter", {
         character: this.character,
-        realm: this.realm
+        realm: this.realm,
       });
 
       this.character = "";
       this.realm = "";
     },
 
-    handleRemoveCharacter: function(character) {
+    handleRemoveCharacter: function (character) {
       this.$store.commit("removeCharacter", character);
-    }
+    },
   },
-  mounted: function() {
+  mounted: function () {
     this.$store.dispatch("pingApi");
-  }
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+* {
+  /*box-sizing: border-box;*/
+  border-collapse: collapse;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -248,117 +138,39 @@ a {
   color: #42b983;
 }
 
-#header {
-  height: 60px;
-  border-bottom: 1px solid #333;
-}
-#header:before,
-#header:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 20px;
-}
-#header:before {
-  top: 0;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
-  background: -ms-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
-  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
-}
-#header:after {
-  top: 40px;
-  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  background: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  background: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-}
-#header-outer {
-  height: 100%;
-  position: relative;
-}
-#header-inner {
-  position: relative;
-  overflow: hidden;
-}
-
-#header-title {
-  height: 40px;
-  position: absolute;
-}
-#header-title h1,
-#header-title h1 a {
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-  color: #9482c9;
-  margin-top: 4px;
-}
-#header-title h2,
-#header-title h2 a {
-  font-family: "Noticia Text", serif;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 11px;
-  color: #999;
-  margin-top: -30px;
-  margin-left: 92px;
-}
-#header-app-title {
-  height: 40px;
-  float: right;
-}
-#header-app-title h2 {
-  font-family: "Permanent Marker", sans-serif;
-  font-weight: normal;
-  font-size: 32px;
-  color: #0070de;
-  margin: 0;
-  text-align: right;
-}
-#header-app-title h3 {
-  font-family: "Permanent Marker", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #fff;
-  margin-top: -16px;
-  text-align: right;
-}
-#logo,
-#subtitle {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-#logo {
-  font-size: 40px;
-  line-height: 40px;
-  letter-spacing: 2px;
-}
-#subtitle {
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 1px;
-}
-#subtitle-wrap {
-  margin-top: 16px;
-}
-.application {
-  margin-top: 20px;
-}
 .contol-area {
+  display: grid;
+  grid-template-areas: "raid spacer character realm search";
+  grid-template-columns: 1fr 1.7fr 1fr 1fr 0.8fr;
   height: 30px;
-  margin-top: -21px;
   padding: 10px;
   border: 1px solid #333;
+  margin-bottom: 20px;
 }
-.float-left {
-  float: left;
+.load-raid {
+  grid-area: raid;
+  min-width: 190px;
+  text-align: left;
 }
-.float-right {
-  float: right;
+.spacer {
+  grid-area: spacer;
 }
+.character-input {
+  grid-area: character;
+  margin-top: 4px;
+  text-align: left;
+}
+.realm-input {
+  grid-area: realm;
+  margin-top: 4px;
+  text-align: left;
+}
+.load-button {
+  grid-area: search;
+  min-width: 160px;
+  text-align: left;
+}
+
 .waiting-spinner h4 {
   font-size: 24px;
   margin-bottom: 6px;
@@ -379,22 +191,296 @@ footer {
   margin: 0;
 }
 
-.grid-container .grid-group {
+.grid-body,
+.grid-header {
   display: grid;
-  grid-template-columns: 10% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-template-areas: "toon equip over head neck shoulder back chest wrist hands waist legs feet finger1 finger2 trinket1 trinket2 main-hand off-hand";
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.grid-group {
-  border: 1px solid #333;
+.grid-header {
+  margin-top: 20px;
+  border-bottom: 1px solid #333;
 }
-.grid-group .grid-item {
-  height: 100px;
-  transform: translate(5px, 10px) rotate(315deg);
+.header-text {
+  display: block;
+  transform: translate(8px, -6px) rotate(310deg);
+  font-size: 14px;
   text-align: left;
-  white-space: nowrap;
+  width: 80px;
 }
-.grid-group .grid-item.grid-character {
-  transform: none;
-  margin-top: 34px;
+.grid-header .grid-item {
+  border: 1px solid transparent;
+  overflow: visible;
+  max-width: 42px;
+  min-width: 30px;
+  height: 40px;
+}
+.grid-header .grid-item.grid-character {
+  width: 100%;
+  text-align: left;
+  max-width: unset;
+  min-width: unset;
+  padding-left: 6px;
+  padding-top: 28px;
+  height: 22px;
+}
+.grid-item {
+  height: 30px;
+  padding-top: 8px;
+  border: 1px solid #222;
+  border-collapse: collapse;
+}
+.column-name {
+  height: 100%;
+  border-bottom: 1px solid #222;
+  font-size: 22px;
+}
+.realm {
+    margin-top: -6px;
+  }
+
+.grid-item-shirt,
+.grid-item-tabard,
+.grid-item-avatar {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .details-container {
+    margin: 40px;
+  }
+  .grid-header {
+    display: none;
+  }
+  .grid-body-character {
+    display: grid;
+    grid-area: toon;
+  }
+  .grid-item-equipped-ilvl {
+    display: grid;
+    grid-area: equip;
+  }
+  .grid-item-overall-ilvl {
+    display: grid;
+    grid-area: over;
+  }
+
+  .grid-body {
+    display: grid;
+    grid-area: gear;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    grid-template-areas:
+      "head toon toon hands"
+      "neck equip over waist"
+      "shoulder blank blank legs"
+      "back avatar avatar feet"
+      "chest avatar avatar finger1"
+      "shirt avatar avatar finger2"
+      "tabard _ _ trinket1"
+      "wrist main-hand off-hand trinket2";
+    width: 90%;
+    min-width: 350px;
+  }
+
+  .grid-item {
+    height: 36px;
+    padding-top: 0;
+    border: none;
+  }
+  .grid-item-head {
+    grid-area: head;
+  }
+  .grid-item-neck {
+    grid-area: neck;
+  }
+  .grid-item-shoulder {
+    grid-area: shoulder;
+  }
+  .grid-item-back {
+    grid-area: back;
+  }
+  .grid-item-chest {
+    grid-area: chest;
+  }
+  .grid-item-shirt {
+    display: block;
+    grid-area: shirt;
+    background-color: #333;
+  }
+  .grid-item-tabard {
+    display: block;
+    grid-area: tabard;
+    background-color: #333;
+  }
+  .grid-item-wrist {
+    grid-area: wrist;
+  }
+  .grid-item-hands {
+    grid-area: hands;
+  }
+  .grid-item-waist {
+    grid-area: waist;
+  }
+  .grid-item-legs {
+    grid-area: legs;
+  }
+  .grid-item-feet {
+    grid-area: feet;
+  }
+  .grid-item-finger1 {
+    grid-area: finger1;
+  }
+  .grid-item-finger2 {
+    grid-area: finger2;
+  }
+  .grid-item-trinket1 {
+    grid-area: trinket1;
+  }
+  .grid-item-trinket2 {
+    grid-area: trinket2;
+  }
+
+  .grid-item-main-hand {
+    grid-area: main-hand;
+  }
+  .grid-item-off-hand {
+    grid-area: off-hand;
+  }
+  .grid-item-avatar {
+    display: block;
+    grid-area: avatar;
+  }
+
+  .grid-item::before {
+    font-size: 11px;
+    display: block;
+    background-color: rgba(25, 25, 25, 1);
+    color: #777;
+    height: 13px;
+  }
+  .grid-item-equipped-ilvl::before {
+    content: "equip ilvl";
+  }
+  .grid-item-overall-ilvl::before {
+    content: "overall ilvl";
+  }
+  .grid-item-head::before {
+    content: "head";
+  }
+  .grid-item-neck::before {
+    content: "neck";
+  }
+  .grid-item-shoulder::before {
+    content: "shoulder";
+  }
+  .grid-item-back::before {
+    content: "back";
+  }
+  .grid-item-chest::before {
+    content: "chest";
+  }
+  .grid-item-shirt::before {
+    content: "shirt";
+  }
+  .grid-item-tabard::before {
+    content: "tabard";
+  }
+  .grid-item-wrist::before {
+    content: "wrist";
+  }
+  .grid-item-hands::before {
+    content: "hands";
+  }
+  .grid-item-waist::before {
+    content: "waist";
+  }
+  .grid-item-legs::before {
+    content: "legs";
+  }
+  .grid-item-feet::before {
+    content: "feet";
+  }
+  .grid-item-finger1::before {
+    content: "finger 1";
+  }
+  .grid-item-finger2::before {
+    content: "finger 2";
+  }
+  .grid-item-trinket1::before {
+    content: "trinket 1";
+  }
+  .grid-item-trinket2::before {
+    content: "trinket 2";
+  }
+  .grid-item-main-hand::before {
+    content: "main hand";
+  }
+  .grid-item-off-hand::before {
+    content: "offhand";
+  }
+  .grid-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 1px;
+  }
+  .avatar {
+    height: 90%;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    border: 5px solid #0a0a0a;
+    border-collapse: collapse;
+  }
+  .column-name {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contol-area {
+    display: grid;
+    grid-template-areas:
+      "character"
+      "realm"
+      "search"
+      "raid";
+    justify-content: stretch;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+  }
+  .load-raid {
+    grid-area: raid;
+    margin-top: 16px;
+    width: 190px;
+  }
+  .spacer {
+    display: none;
+  }
+  .character-input {
+    grid-area: character;
+    margin-top: 4px;
+    width: 400px;
+  }
+  .realm-input {
+    grid-area: realm;
+    margin-top: 4px;
+    width: 400px;
+  }
+  .load-button {
+    grid-area: search;
+    margin-top: 4px;
+    width: 190px;
+  }
+  .contol-area input,
+  .contol-area button {
+    width: 100%;
+  }
 }
 </style>

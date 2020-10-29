@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AskUncleZar from "./components/AskUncleZar-Grid.vue";
+import AskUncleZar from "./components/AskUncleZar.vue";
 
 export default {
   name: "app",
