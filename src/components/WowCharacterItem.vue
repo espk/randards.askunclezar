@@ -35,6 +35,7 @@ export default {
     azeritePower: function() {
       var parameters = [];
       if (this.WowCharacterItem.azeriteEmpoweredItem) {
+
         this.WowCharacterItem.azeriteEmpoweredItem.azeritePowers.forEach(power => {
           parameters.push(power.id)
         });
@@ -45,7 +46,6 @@ export default {
     
   },
   mounted() {
-    //console.log(this.toon);
   }
   
 };

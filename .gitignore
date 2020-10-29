@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
-/src/dist
+src/dist
+dist
 
 # local env files
 .env.local
@@ -21,4 +22,5 @@ yarn-error.log*
 *.sw*
 
 # API config
-/src/data/config.js
+src/data/config.js
+src/vue.config.js

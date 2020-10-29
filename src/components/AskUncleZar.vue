@@ -140,6 +140,7 @@
           </tbody>
         </table>
       </div>
+      <!--
       <div class="application-container">
         <div class="grid-container">
           <div class="grid-group grid-head">
@@ -165,6 +166,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
     <div class="waiting-panel" v-if="loadState.loading">
       <div class="waiting-spinner">

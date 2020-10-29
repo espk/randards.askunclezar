@@ -117,13 +117,18 @@ export default new Vuex.Store({
     
         armory.getCharacter(payload.character, payload.realm)
             .then(result => { 
-              context.commit('addCharacter', result.data)
+              context.commit('addCharacter', helpers.mapCharacterStructure(result.data))
               context.commit('calculateStatistics')
                   
               context.commit('decrementLoading')
               context.commit('setLoading')
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+              console.log(error)
+
+              context.commit('decrementLoading')
+              context.commit('setLoading')
+            })
       },
       pingApi() {
         armory.pingHeartbeat()
@@ -134,6 +139,75 @@ export default new Vuex.Store({
 
 
   const helpers = {
+    
+    mapCharacterStructure(wowApiResult) {
+      var mapped = {};
+
+      mapped.id = wowApiResult.character.id;
+      mapped.name = wowApiResult.character.name;
+      mapped.realm = wowApiResult.character.realm.name;
+      mapped.class = wowApiResult.character.character_class.id;
+      mapped.race = wowApiResult.character.race.id;
+      mapped.level = wowApiResult.character.level;
+
+      mapped.items = {};
+
+      mapped.items.averageItemLevel = wowApiResult.character.average_item_level;
+      mapped.items.averageItemLevelEquipped = wowApiResult.character.equipped_item_level;
+
+      mapped.items.head = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Head'));
+      mapped.items.neck = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Neck'));
+      mapped.items.shoulder = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Shoulders'));
+      mapped.items.back = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Back'));
+      mapped.items.chest = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Chest'));
+      mapped.items.shirt = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Shirt'));
+      mapped.items.tabard = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Tabard'));
+      mapped.items.wrist = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Wrist'));
+      mapped.items.hands = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Hands'));
+      mapped.items.waist = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Waist'));
+      mapped.items.legs = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Legs'));
+      mapped.items.feet = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Feet'));
+      mapped.items.finger1 = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Ring 1'));
+      mapped.items.finger2 = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Ring 2'));
+      mapped.items.trinket1 = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Trinket 1'));
+      mapped.items.trinket2 = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Trinket 2'));
+      mapped.items.mainHand = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Main Hand'));
+      mapped.items.offHand = helpers.mappedItem(wowApiResult.equipment.equipped_items.find(item => item.slot.name === 'Off Hand'));
+
+      mapped.media = {};
+      mapped.media.avatar = wowApiResult.media.assets.find(asset => asset.key === 'avatar').value;
+      mapped.media.inset = wowApiResult.media.assets.find(asset => asset.key === 'inset').value;
+      mapped.media.main = wowApiResult.media.assets.find(asset => asset.key === 'main').value;
+      mapped.media.mainRaw = wowApiResult.media.assets.find(asset => asset.key === 'main-raw').value;
+
+
+      return mapped;
+    },
+
+    mappedItem(item) {
+      if (item === undefined) { return {} }
+
+      var mapped = {
+        id: item.item.id,
+        quality: item.quality.name,
+        itemLevel: item.level.value
+      };
+
+      if (item.slot.name === 'Main Hand') {
+        mapped.weaponType = item.inventory_type.name;
+      }
+
+      if (item.azerite_details) {
+        
+        mapped.azeriteEmpoweredItem = { azeritePowers: [] };
+        if (item.azerite_details.selected_powers) {
+          item.azerite_details.selected_powers.forEach(power => { mapped.azeriteEmpoweredItem.azeritePowers.push({ id: power.id }) });
+        }
+      }
+
+       return mapped
+    },
+
     applyPercentile(state) {
       state.raid.forEach(character => {
 
@@ -162,7 +236,13 @@ export default new Vuex.Store({
 
       return percentile
     },
+
+    getCharacterTemplate() {
+      return 
+    }
   }
+
+  
 
   const currentRaid = [
   {
@@ -190,10 +270,6 @@ export default new Vuex.Store({
     realm: 'Whisperwind'
   },
   {
-    name: 'Garnrock',
-    realm: 'Whisperwind'
-  },
-  {
     name: 'Niven',
     realm: 'Whisperwind'
   },
@@ -207,10 +283,6 @@ export default new Vuex.Store({
   },
   {
     name: 'Zaraea',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Delynarra',
     realm: 'Dentarg'
   },
   {
@@ -234,7 +306,7 @@ export default new Vuex.Store({
     realm: 'Whisperwind'
   },
   {
-    name: 'Dutchgirl',
+    name: 'Msguided',
     realm: 'Whisperwind'
   }
 

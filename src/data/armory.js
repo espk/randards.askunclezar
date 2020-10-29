@@ -8,7 +8,7 @@ export default {
   apiRoot: config.apiRoot,
 
   pingHeartbeat() {
-    return axios.get(this.apiRoot + `/api/characters/heartbeat`)
+    return "ba-dum"//axios.get(this.apiRoot + `/api/characters/heartbeat`)
   },
 
   getCharacter(name, realm) {

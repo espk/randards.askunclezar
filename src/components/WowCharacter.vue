@@ -47,7 +47,7 @@ export default {
       return 'percent-' + this.WowCharacter.items.averageItemLevelEquippedPercentile  
     },
     hasTwoHander: function() {
-      return (this.WowCharacter.items.offHand === undefined)
+      return (this.WowCharacter.items.mainHand.weaponType === 'Two-Hand' || this.WowCharacter.items.mainHand.weaponType === 'Ranged')
     }
   },
   methods: {
