@@ -195,7 +195,8 @@ const helpers = {
     var mapped = {
       id: item.item.id,
       quality: item.quality.name,
-      itemLevel: item.level.value
+      itemLevel: item.level.value,
+      sockets: []
     };
 
     if (item.slot.name === 'Main Hand') {
@@ -208,6 +209,17 @@ const helpers = {
       if (item.azerite_details.selected_powers) {
         item.azerite_details.selected_powers.forEach(power => { mapped.azeriteEmpoweredItem.azeritePowers.push({ id: power.id }) });
       }
+    }
+
+    if (item.sockets !== undefined && item.sockets.length > 0) {
+      item.sockets.forEach(socket => {
+        if (socket.item !== undefined) { 
+          mapped.sockets.push({ id: socket.item.id, name: socket.item.name, displayString: socket.display_string })
+        } 
+        else {
+          mapped.sockets.push({ id: null, name: "", displayString: "no gem"})
+        }
+      })
     }
 
     return mapped
@@ -275,7 +287,7 @@ const currentRaid = [
     realm: 'Whisperwind'
   },
   {
-    name: 'Niven',
+    name: 'Nikkoh',
     realm: 'Whisperwind'
   },
   {
@@ -303,13 +315,34 @@ const currentRaid = [
     realm: 'Whisperwind'
   },
   {
-    name: 'Zarjani',
+    name: 'Msguided',
     realm: 'Whisperwind'
   },
   {
-    name: 'Msguided',
+    name: 'Rhin',
+    realm: 'Dentarg'
+  },
+  {
+    name: 'Zandolar',
+    realm: 'Dentarg'
+  },
+  {
+    name: 'Zenyada',
+    realm: 'Dentarg'
+  },
+  {
+    name: 'Akeno',
+    realm: 'Dentarg'
+  },
+  {
+    name: 'Melisandraa',
     realm: 'Whisperwind'
-  }
+  },
+  {
+    name: 'Zarjani',
+    realm: 'Whisperwind'
+  },
+
 
 ]
 
