@@ -80,9 +80,8 @@
       v-bind:wow-character-item="WowCharacter.items.trinket2"
     />
     <WowCharacterItem
-      v-bind:item="'main-hand'"
+      v-bind:item="'two-hand'"
       v-bind:wow-character-item="WowCharacter.items.mainHand"
-      class="grid-span-2"
       v-if="hasTwoHander"
     />
     <WowCharacterItem
@@ -126,7 +125,8 @@ export default {
       );
     },
     hasTwoHander: function () {
-      return this.WowCharacter.items.offHand === undefined;
+      return (this.WowCharacter.items.mainHand.weaponType === "Two-Hand" ||
+              this.WowCharacter.items.mainHand.weaponType === "Ranged");
     },
     backgroundStyle: function() {
       return { 

@@ -22,24 +22,62 @@
         <div class="grid-container">
           <div class="grid-header">
             <div class="grid-item grid-character">name</div>
-            <div class="grid-item grid-equipped-ilvl"><span class="header-text">equipped</span></div>
-            <div class="grid-item grid-overall-ilvl"><span class="header-text">max</span></div>
-            <div class="grid-item grid-head"><span class="header-text">head</span></div>
-            <div class="grid-item grid-neck"><span class="header-text">neck</span></div>
-            <div class="grid-item grid-shoulders"><span class="header-text">shoulders</span></div>
-            <div class="grid-item grid-back"><span class="header-text">back</span></div>
-            <div class="grid-item grid-chest"><span class="header-text">chest</span></div>
-            <div class="grid-item grid-wrist"><span class="header-text">wrist</span></div>
-            <div class="grid-item grid-hands"><span class="header-text">hands</span></div>
-            <div class="grid-item grid-waist"><span class="header-text">waist</span></div>
-            <div class="grid-item grid-legs"><span class="header-text">legs</span></div>
-            <div class="grid-item grid-feet"><span class="header-text">feet</span></div>
-            <div class="grid-item grid-ring1"><span class="header-text">ring 1</span></div>
-            <div class="grid-item grid-ring2"><span class="header-text">ring 2</span></div>
-            <div class="grid-item grid-trinket1"><span class="header-text">trinket 1</span></div>
-            <div class="grid-item grid-trinket2"><span class="header-text">trinket 2</span></div>
-            <div class="grid-item grid-main-hand"><span class="header-text">main hand</span></div>
-            <div class="grid-item grid-off-hand"><span class="header-text">off hand</span></div>
+            <div class="grid-item grid-equipped-ilvl">
+              <span class="header-text">equipped</span>
+            </div>
+            <div class="grid-item grid-overall-ilvl">
+              <span class="header-text">max</span>
+            </div>
+            <div class="grid-spacer">
+            </div>
+            <div class="grid-item grid-head">
+              <span class="header-text">head</span>
+            </div>
+            <div class="grid-item grid-neck">
+              <span class="header-text">neck</span>
+            </div>
+            <div class="grid-item grid-shoulders">
+              <span class="header-text">shoulders</span>
+            </div>
+            <div class="grid-item grid-back">
+              <span class="header-text">back</span>
+            </div>
+            <div class="grid-item grid-chest">
+              <span class="header-text">chest</span>
+            </div>
+            <div class="grid-item grid-wrist">
+              <span class="header-text">wrist</span>
+            </div>
+            <div class="grid-item grid-hands">
+              <span class="header-text">hands</span>
+            </div>
+            <div class="grid-item grid-waist">
+              <span class="header-text">waist</span>
+            </div>
+            <div class="grid-item grid-legs">
+              <span class="header-text">legs</span>
+            </div>
+            <div class="grid-item grid-feet">
+              <span class="header-text">feet</span>
+            </div>
+            <div class="grid-item grid-ring1">
+              <span class="header-text">ring 1</span>
+            </div>
+            <div class="grid-item grid-ring2">
+              <span class="header-text">ring 2</span>
+            </div>
+            <div class="grid-item grid-trinket1">
+              <span class="header-text">trinket 1</span>
+            </div>
+            <div class="grid-item grid-trinket2">
+              <span class="header-text">trinket 2</span>
+            </div>
+            <div class="grid-item grid-main-hand">
+              <span class="header-text">main hand</span>
+            </div>
+            <div class="grid-item grid-off-hand">
+              <span class="header-text">off hand</span>
+            </div>
           </div>
           <div
             v-for="WowCharacter in raid"
@@ -59,7 +97,7 @@
         <h4>
           <span>{{ currentFlavorText }}</span>
         </h4>
-        <img src="/img/green-spin.gif" height="64" width="64" />
+        <img src="img/green-spin.gif" height="64" width="64" />
         <div>Loading {{ loadState.loadingCount }} characters</div>
       </div>
     </div>
@@ -194,8 +232,8 @@ footer {
 .grid-body,
 .grid-header {
   display: grid;
-  grid-template-areas: "toon equip over head neck shoulder back chest wrist hands waist legs feet finger1 finger2 trinket1 trinket2 main-hand off-hand";
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "toon equip over spacer head neck shoulder back chest wrist hands waist legs feet finger1 finger2 trinket1 trinket2 main-hand off-hand";
+  grid-template-columns: 3fr 1fr 1fr 0.05fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .grid-header {
@@ -237,18 +275,81 @@ footer {
   font-size: 22px;
 }
 .realm {
-    margin-top: -6px;
-  }
+  margin-top: -6px;
+}
 
 .grid-item-shirt,
 .grid-item-tabard,
 .grid-item-avatar {
   display: none;
 }
+.grid-item-equipped-ilvl {
+  display: grid;
+  grid-area: equip;
+}
+.grid-item-overall-ilvl {
+  display: grid;
+  grid-area: over;
+}
+.grid-item-head {
+  grid-area: head;
+}
+.grid-item-neck {
+  grid-area: neck;
+}
+.grid-item-shoulder {
+  grid-area: shoulder;
+}
+.grid-item-back {
+  grid-area: back;
+}
+.grid-item-chest {
+  grid-area: chest;
+}
+.grid-item-wrist {
+  grid-area: wrist;
+}
+.grid-item-hands {
+  grid-area: hands;
+}
+.grid-item-waist {
+  grid-area: waist;
+}
+.grid-item-legs {
+  grid-area: legs;
+}
+.grid-item-feet {
+  grid-area: feet;
+}
+.grid-item-finger1 {
+  grid-area: finger1;
+}
+.grid-item-finger2 {
+  grid-area: finger2;
+}
+.grid-item-trinket1 {
+  grid-area: trinket1;
+}
+.grid-item-trinket2 {
+  grid-area: trinket2;
+}
+
+.grid-item-two-hand {
+  grid-area: main-hand / main-hand / off-hand / off-hand;
+}
+.grid-item-main-hand {
+  grid-area: main-hand;
+}
+.grid-item-off-hand {
+  grid-area: off-hand;
+}
 
 @media (max-width: 800px) {
+  div.group {
+    width: 100%;
+  }
   .details-container {
-    margin: 40px;
+    margin: 40px 20px;
   }
   .grid-header {
     display: none;
@@ -256,14 +357,6 @@ footer {
   .grid-body-character {
     display: grid;
     grid-area: toon;
-  }
-  .grid-item-equipped-ilvl {
-    display: grid;
-    grid-area: equip;
-  }
-  .grid-item-overall-ilvl {
-    display: grid;
-    grid-area: over;
   }
 
   .grid-body {
@@ -280,8 +373,7 @@ footer {
       "shirt avatar avatar finger2"
       "tabard _ _ trinket1"
       "wrist main-hand off-hand trinket2";
-    width: 90%;
-    min-width: 350px;
+    width: 100%;
   }
 
   .grid-item {
@@ -289,65 +381,7 @@ footer {
     padding-top: 0;
     border: none;
   }
-  .grid-item-head {
-    grid-area: head;
-  }
-  .grid-item-neck {
-    grid-area: neck;
-  }
-  .grid-item-shoulder {
-    grid-area: shoulder;
-  }
-  .grid-item-back {
-    grid-area: back;
-  }
-  .grid-item-chest {
-    grid-area: chest;
-  }
-  .grid-item-shirt {
-    display: block;
-    grid-area: shirt;
-    background-color: #333;
-  }
-  .grid-item-tabard {
-    display: block;
-    grid-area: tabard;
-    background-color: #333;
-  }
-  .grid-item-wrist {
-    grid-area: wrist;
-  }
-  .grid-item-hands {
-    grid-area: hands;
-  }
-  .grid-item-waist {
-    grid-area: waist;
-  }
-  .grid-item-legs {
-    grid-area: legs;
-  }
-  .grid-item-feet {
-    grid-area: feet;
-  }
-  .grid-item-finger1 {
-    grid-area: finger1;
-  }
-  .grid-item-finger2 {
-    grid-area: finger2;
-  }
-  .grid-item-trinket1 {
-    grid-area: trinket1;
-  }
-  .grid-item-trinket2 {
-    grid-area: trinket2;
-  }
 
-  .grid-item-main-hand {
-    grid-area: main-hand;
-  }
-  .grid-item-off-hand {
-    grid-area: off-hand;
-  }
   .grid-item-avatar {
     display: block;
     grid-area: avatar;
@@ -414,6 +448,7 @@ footer {
   .grid-item-trinket2::before {
     content: "trinket 2";
   }
+  .grid-item-two-hand::before,
   .grid-item-main-hand::before {
     content: "main hand";
   }
@@ -441,9 +476,10 @@ footer {
     padding: 0;
     margin: 0;
   }
-  
+
   .contol-area {
     display: grid;
+    grid-template-columns: 80%;
     grid-template-areas:
       "character"
       "realm"
@@ -466,12 +502,12 @@ footer {
   .character-input {
     grid-area: character;
     margin-top: 4px;
-    width: 400px;
+    width: 100%;
   }
   .realm-input {
     grid-area: realm;
     margin-top: 4px;
-    width: 400px;
+    width: 100%;
   }
   .load-button {
     grid-area: search;

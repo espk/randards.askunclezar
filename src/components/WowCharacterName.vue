@@ -1,7 +1,7 @@
 <template>
   <div class="column-name">
     <div v-bind:style="{ color: characterClass }">
-      {{WowCharacter.name}}
+      <a v-bind:href="characterLink" target="_blank">{{WowCharacter.name}}</a>
       <button
         class="remove-toon pull-right close-plus"
         v-on:click="removeToon()"
@@ -25,6 +25,9 @@ export default {
       });
 
       return item[0].color;
+    },
+    characterLink: function() {
+      return `https://worldofwarcraft.com/en-us/character/us/${this.WowCharacter.realm}/${this.WowCharacter.name}`
     }
   },
   mounted() {

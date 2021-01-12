@@ -29,9 +29,10 @@ export default {
     },
     wowheadLink: function() {
       var link = "item=" + this.WowCharacterItem.id;
-      var traits = this.azeritePower;
 
-      if (traits !== "") link += "&azerite-powers=" + traits;
+      if (this.azeritePower !== "") link += "&azerite-powers=" + this.azeritePower
+      if (this.WowCharacterItem.itemLevel !== "") link += "&ilvl=" + this.WowCharacterItem.itemLevel
+      if (this.WowCharacterItem.sockets && this.WowCharacterItem.sockets.length > 0) link += "&gems=" + this.WowCharacterItem.sockets.map(s => s.id).join(":")
 
       return link;
     },
