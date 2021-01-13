@@ -9,6 +9,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     raid: [],
+    itemLevels: {},
     statistics: {
       min: 0,
       max: 0,
@@ -70,7 +71,7 @@ export default new Vuex.Store({
           state.statistics.datapoints.push(character.items[slot].itemLevel)
         });
 
-        if (character.items.offHand) state.statistics.datapoints.push(character.items.offHand.itemLevel)
+        if (character.items.offHand && character.items.offHand.itemLevel) state.statistics.datapoints.push(character.items.offHand.itemLevel)
       })
       state.statistics.datapoints.sort()
 
@@ -78,7 +79,7 @@ export default new Vuex.Store({
       state.statistics.max = state.statistics.datapoints[state.statistics.datapoints.length - 1]
 
       var count = state.statistics.datapoints.length
-      var outlierLength = Math.floor(count * 0.15)
+      var outlierLength = Math.floor(count * 0.1)
 
       state.statistics.curveBottom = state.statistics.datapoints[outlierLength]
       state.statistics.curveTop = state.statistics.datapoints[count - outlierLength]
@@ -227,16 +228,26 @@ const helpers = {
 
   applyPercentile(state) {
     state.raid.forEach(character => {
+      var characterId = `${character.name}-${character.realm}`
+
+      if (!state.itemLevels[characterId]) {
+        Vue.set(state.itemLevels, characterId, this.getNewMapping())
+      }
 
       character.items = { ...character.items, averageItemLevelPercentile: this.getPercentileForItemLevel(state, character.items.averageItemLevel) }
+      state.itemLevels[characterId].averageItemLevel = this.getPercentileForItemLevel(state, character.items.averageItemLevel)
+
       character.items = { ...character.items, averageItemLevelEquippedPercentile: this.getPercentileForItemLevel(state, character.items.averageItemLevelEquipped) }
+      state.itemLevels[characterId].averageItemLevelEquipped = this.getPercentileForItemLevel(state, character.items.averageItemLevelEquipped)
 
       nonOffHandEquipmentSlots.forEach(slot => {
         character.items[slot] = { ...character.items[slot], itemLevelPercentile: this.getPercentileForItemLevel(state, character.items[slot].itemLevel) }
+        state.itemLevels[characterId][slot] = this.getPercentileForItemLevel(state, character.items[slot].itemLevel)
       });
 
       if (character.items.offHand)
         character.items.offHand = { ...character.items.offHand, itemLevelPercentile: this.getPercentileForItemLevel(state, character.items.offHand.itemLevel) }
+        state.itemLevels[characterId].offHand = this.getPercentileForItemLevel(state, character.items.offHand.itemLevel)
     })
   },
 
@@ -252,6 +263,31 @@ const helpers = {
     if (percentile < 0) return 0
 
     return percentile
+  },
+
+  getNewMapping() {
+    return {
+      averageItemLevel: -1, 
+      averageItemLevelEquipped: -1,
+      head: -1,
+      neck: -1,
+      shoulder: -1,
+      back: -1,
+      chest: -1,
+      shirt: -1,
+      tabard: -1,
+      wrist: -1,
+      hands: -1,
+      waist: -1,
+      legs: -1,
+      feet: -1,
+      finger1: -1,
+      finger2: -1,
+      trinket1: -1,
+      trinket2: -1,
+      mainHand: -1,
+      offHand: -1,
+    }
   },
 
   getCharacterTemplate() {

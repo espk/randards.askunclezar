@@ -5,12 +5,17 @@
 </template>
 
 <script>
+
+import { mapState } from "vuex";
+
 export default {
   props: {
     WowCharacterItem: Object,
-    item: String
+    item: String,
+    characterId: String
   },
-  computed: {
+  computed: mapState({
+    itemLevels: state => state.itemLevels,
     cleanedCharacterItem: function() {
       if ((this.WowCharacterItem === undefined) || 
          (this.item === 'tabard') ||
@@ -22,8 +27,9 @@ export default {
     },
     itemLevelClass: function() {
       var style = "grid-item-" + this.item;
+      var itemForLookup = this.item.replace("main-hand", "mainHand").replace("two-hand", "mainHand").replace("off-hand", "offHand")
       if (this.WowCharacterItem !== undefined)
-        style += " percent-" + this.WowCharacterItem.itemLevelPercentile;
+        style += " percent-" + this.itemLevels[this.characterId][itemForLookup]
 
       return style;
     },
@@ -48,7 +54,7 @@ export default {
 
       return parameters.join(":");
     }
-  },
+  }),
   mounted() {
   }
 };

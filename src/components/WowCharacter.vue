@@ -17,80 +17,99 @@
     </div>
     <WowCharacterItem
       v-bind:item="'head'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.head"
     />
     <WowCharacterItem
       v-bind:item="'neck'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.neck"
     />
     <WowCharacterItem
       v-bind:item="'shoulder'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.shoulder"
     />
     <WowCharacterItem
       v-bind:item="'back'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.back"
     />
     <WowCharacterItem
       v-bind:item="'chest'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.chest"
     />
     <WowCharacterItem
       v-bind:item="'shirt'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.shirt"
     />
     <WowCharacterItem
       v-bind:item="'tabard'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.tabard"
     />
     <WowCharacterItem
       v-bind:item="'wrist'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.wrist"
     />
     <WowCharacterItem
       v-bind:item="'hands'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.hands"
     />
     <WowCharacterItem
       v-bind:item="'waist'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.waist"
     />
     <WowCharacterItem
       v-bind:item="'legs'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.legs"
     />
     <WowCharacterItem
       v-bind:item="'feet'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.feet"
     />
     <WowCharacterItem
       v-bind:item="'finger1'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.finger1"
     />
     <WowCharacterItem
       v-bind:item="'finger2'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.finger2"
     />
     <WowCharacterItem
       v-bind:item="'trinket1'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.trinket1"
     />
     <WowCharacterItem
       v-bind:item="'trinket2'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.trinket2"
     />
     <WowCharacterItem
       v-bind:item="'two-hand'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.mainHand"
       v-if="hasTwoHander"
     />
     <WowCharacterItem
       v-bind:item="'main-hand'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.mainHand"
       v-if="!hasTwoHander"
     />
     <WowCharacterItem
       v-bind:item="'off-hand'"
+			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.offHand"
       v-if="!hasTwoHander"
     />
@@ -105,6 +124,7 @@
 <script>
 import WowCharacterItem from "./WowCharacterItem";
 import WowCharacterName from "./WowCharacterName";
+import { mapState } from "vuex";
 
 export default {
   components: {
@@ -115,14 +135,16 @@ export default {
     WowCharacter: Object,
   },
   mounted() {},
-  computed: {
+  computed: mapState({
+    itemLevels: state => state.itemLevels,
+    characterId: function() {
+      return `${this.WowCharacter.name}-${this.WowCharacter.realm}`
+    },
     itemLevelClass: function () {
-      return "percent-" + this.WowCharacter.items.averageItemLevelPercentile;
+      return "percent-" + this.itemLevels[this.characterId].averageItemLevel;
     },
     itemLevelEquippedClass: function () {
-      return (
-        "percent-" + this.WowCharacter.items.averageItemLevelEquippedPercentile
-      );
+      return "percent-" + this.itemLevels[this.characterId].averageItemLevelEquipped;
     },
     hasTwoHander: function () {
       return (this.WowCharacter.items.mainHand.weaponType === "Two-Hand" ||
@@ -133,7 +155,7 @@ export default {
         backgroundImage: `url('${this.WowCharacter.media.inset}')`
       }
     }
-  },
+  }),
   methods: {
     handleRemoveCharacter: function (value) {
       this.$emit("removeCharacter", value);

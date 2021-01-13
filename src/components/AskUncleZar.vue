@@ -123,7 +123,7 @@ export default {
       realm: "",
     };
   },
-  computed: mapState(["raid", "loadState", "currentFlavorText"]),
+  computed: mapState(["raid", "itemLevels", "loadState", "currentFlavorText"]),
   methods: {
     loadSns: function () {
       this.$store.commit("shuffleText");
@@ -146,6 +146,7 @@ export default {
 
     handleRemoveCharacter: function (character) {
       this.$store.commit("removeCharacter", character);
+      this.$store.commit("calculateStatistics");
     },
   },
   mounted: function () {
