@@ -68,7 +68,8 @@ export default new Vuex.Store({
       state.raid.forEach((character) => {
 
         nonOffHandEquipmentSlots.forEach(slot => {
-          state.statistics.datapoints.push(character.items[slot].itemLevel)
+          if (character.items[slot].quality !== "Legendary")
+            state.statistics.datapoints.push(character.items[slot].itemLevel)
         });
 
         if (character.items.offHand && character.items.offHand.itemLevel) state.statistics.datapoints.push(character.items.offHand.itemLevel)
@@ -99,11 +100,6 @@ export default new Vuex.Store({
       context.commit('clearData')
 
       currentRaid.forEach(member => {
-        context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
-      });
-    },
-    getSnS(context) {
-      sns.forEach(member => {
         context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
       });
     },
@@ -197,6 +193,7 @@ const helpers = {
       id: item.item.id,
       quality: item.quality.name,
       itemLevel: item.level.value,
+      isTier: (item.set !== undefined),
       sockets: []
     };
 
@@ -205,11 +202,14 @@ const helpers = {
     }
 
     if (item.azerite_details) {
-
       mapped.azeriteEmpoweredItem = { azeritePowers: [] };
       if (item.azerite_details.selected_powers) {
         item.azerite_details.selected_powers.forEach(power => { mapped.azeriteEmpoweredItem.azeritePowers.push({ id: power.id }) });
       }
+    }
+
+    if (item.bonus_list) {
+      mapped.bonus = item.bonus_list
     }
 
     if (item.sockets !== undefined && item.sockets.length > 0) {
@@ -303,7 +303,7 @@ const currentRaid = [
     realm: 'Whisperwind'
   },
   {
-    name: 'Subtext',
+    name: 'Hoofnshield',
     realm: 'Whisperwind'
   },
   {
@@ -335,11 +335,7 @@ const currentRaid = [
     realm: 'Dentarg'
   },
   {
-    name: 'Zaraea',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Ackroma',
+    name: 'Actherion',
     realm: 'Whisperwind'
   },
   {
@@ -351,67 +347,43 @@ const currentRaid = [
     realm: 'Whisperwind'
   },
   {
-    name: 'Msguided',
+    name: 'Shenanigins',
     realm: 'Whisperwind'
   },
   {
-    name: 'Rhin',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Zandolar',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Zenyada',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Akeno',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Melisandraa',
+    name: 'Nelliël',
     realm: 'Whisperwind'
   },
   {
-    name: 'Zarjani',
+    name: 'Taal',
     realm: 'Whisperwind'
   },
+  {
+    name: 'Ulquiorrà',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Terc',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Guenevere',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Monklezar',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Karris',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Ackroma',
+    realm: 'Whisperwind'
+  },
+  
 
-
-]
-
-const sns = [
-
-  {
-    name: 'Fairybútt',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Èspi',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Foxkreig',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Tredecim',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Tredici',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Tòph',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Zauberr',
-    realm: 'Whisperwind'
-  }
 ]
 
 const nonOffHandEquipmentSlots = ['head', 'neck', 'shoulder', 'back', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'finger1', 'finger2', 'trinket1', 'trinket2', 'mainHand']

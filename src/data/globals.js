@@ -12,6 +12,6 @@ export default {
         { "id": 9, "mask": 256, "powerType": "mana", "name": "Warlock", "color": '#9482C9' },
         { "id": 10, "mask": 512, "powerType": "energy", "name": "Monk", "color": '#00FF96' },
         { "id": 11, "mask": 1024, "powerType": "mana", "name": "Druid", "color": '#FF7D0A' },
-        { "id": 12, "mask": 1024, "powerType": "mana", "name": "Demon Hunter", "color": '#A330C9' }],
-
-  }
+        { "id": 12, "mask": 1024, "powerType": "mana", "name": "Demon Hunter", "color": '#A330C9' },
+        { "id": 13, "mask": 2048, "powerType": "mana", "name": "Demon Hunter", "color": '#33937F' }],
+}

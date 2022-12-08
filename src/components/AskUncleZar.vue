@@ -125,10 +125,6 @@ export default {
   },
   computed: mapState(["raid", "itemLevels", "loadState", "currentFlavorText"]),
   methods: {
-    loadSns: function () {
-      this.$store.commit("shuffleText");
-      this.$store.dispatch("getSnS");
-    },
     loadRaid: function () {
       this.$store.commit("shuffleText");
       this.$store.dispatch("getCurrentRaid");
@@ -264,6 +260,7 @@ footer {
   padding-top: 28px;
   height: 22px;
 }
+
 .grid-item {
   height: 30px;
   padding-top: 8px;
@@ -274,6 +271,12 @@ footer {
   height: 100%;
   border-bottom: 1px solid #222;
   font-size: 22px;
+}
+.column-name a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis ;
+  max-width: 130px;
 }
 .realm {
   margin-top: -6px;
@@ -358,6 +361,12 @@ footer {
   .grid-body-character {
     display: grid;
     grid-area: toon;
+  }
+
+  .column-name a {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis ;
   }
 
   .grid-body {

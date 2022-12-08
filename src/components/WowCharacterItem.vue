@@ -1,6 +1,7 @@
 <template>
   <div v-bind:class="itemLevelClass" class="grid-item">
     <a href="#" v-bind:rel="wowheadLink">{{cleanedCharacterItem.itemLevel}}</a>
+    <div v-if="cleanedCharacterItem.isTier" class="tier-indicator">tier</div>
   </div>
 </template>
 
@@ -28,6 +29,8 @@ export default {
     itemLevelClass: function() {
       var style = "grid-item-" + this.item;
       var itemForLookup = this.item.replace("main-hand", "mainHand").replace("two-hand", "mainHand").replace("off-hand", "offHand")
+      if (this.WowCharacterItem.isTier)
+        style += " tier"
       if (this.WowCharacterItem !== undefined)
         style += " percent-" + this.itemLevels[this.characterId][itemForLookup]
 
@@ -38,6 +41,7 @@ export default {
 
       if (this.azeritePower !== "") link += "&azerite-powers=" + this.azeritePower
       if (this.WowCharacterItem.itemLevel !== "") link += "&ilvl=" + this.WowCharacterItem.itemLevel
+      if (this.WowCharacterItem.bonus && this.WowCharacterItem.bonus.length > 0) link += "&bonus=" + this.WowCharacterItem.bonus.join(":")
       if (this.WowCharacterItem.sockets && this.WowCharacterItem.sockets.length > 0) link += "&gems=" + this.WowCharacterItem.sockets.map(s => s.id).join(":")
 
       return link;
@@ -61,5 +65,11 @@ export default {
 </script>
 
 <style>
+
+.tier-indicator {
+  color: #cca;
+  font-size: 9px;
+  margin-top: -5px;
+}
 </style>
 
