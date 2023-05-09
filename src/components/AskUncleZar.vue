@@ -3,7 +3,10 @@
     <div class="group">
       <div class="contol-area">
         <div class="load-raid">
-          <button @click="loadRaid()">Load Raid Members</button>
+          <button @click="loadRaid()">Load Raid</button>
+        </div>
+        <div class="load-guild">
+          <button @click="loadGuild()">Load Guild</button>
         </div>
         <div class="spacer">&nbsp;</div>
         <div class="character-input">
@@ -129,6 +132,10 @@ export default {
       this.$store.commit("shuffleText");
       this.$store.dispatch("getCurrentRaid");
     },
+    loadGuild: function () {
+      this.$store.commit("shuffleText");
+      this.$store.dispatch("getGuild");
+    },
     addCharacter: function () {
       this.$store.commit("shuffleText");
       this.$store.dispatch("loadSingleCharacter", {
@@ -175,8 +182,8 @@ a {
 
 .contol-area {
   display: grid;
-  grid-template-areas: "raid spacer character realm search";
-  grid-template-columns: 1fr 1.7fr 1fr 1fr 0.8fr;
+  grid-template-areas: "raid guild spacer character realm search";
+  grid-template-columns: 1fr 1fr 2.2fr 1fr 1fr 0.8fr;
   height: 30px;
   padding: 10px;
   border: 1px solid #333;
@@ -184,7 +191,12 @@ a {
 }
 .load-raid {
   grid-area: raid;
-  min-width: 190px;
+  min-width: 115px;
+  text-align: left;
+}
+.load-guild {
+  grid-area: guild;
+  min-width: 120px;
   text-align: left;
 }
 .spacer {
@@ -494,7 +506,8 @@ footer {
       "character"
       "realm"
       "search"
-      "raid";
+      "raid"
+      "guild";
     justify-content: stretch;
     height: auto;
     padding: 10px;
@@ -504,6 +517,11 @@ footer {
   .load-raid {
     grid-area: raid;
     margin-top: 16px;
+    width: 190px;
+  }
+  .load-guild {
+    grid-area: guild;
+    margin-top: 4px;
     width: 190px;
   }
   .spacer {

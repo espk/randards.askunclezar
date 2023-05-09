@@ -14,5 +14,9 @@ export default {
   getCharacter(name, realm) {
     return axios.get(this.apiRoot + `/api/characters/${realm}/${name}`)
   },
+
+  getGuild() {
+    return axios.get(this.apiRoot + `/api/guildcharacters`)
+  },
   
 }

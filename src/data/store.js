@@ -103,6 +103,35 @@ export default new Vuex.Store({
         context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
       });
     },
+    getGuild(context) {
+      context.commit('clearData')
+
+      var guild = []
+
+      armory.getGuild()
+        .then(result => {
+          
+          result.data.members.forEach(toon => { 
+            
+            if (toon.character.level === 70) {
+              console.log(toon)
+              guild.push({ name: toon.character.name, realm: toon.character.realm.slug }) 
+            }
+          })
+
+          guild.forEach(member => {
+            context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
+          })
+
+        })
+        .catch(error => {
+          console.log(error)
+        })
+
+      guild.forEach(member => {
+        context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
+      });
+    },
     loadSingleCharacter(context, payload) {
 
       context.commit('incrementLoading')
@@ -179,7 +208,6 @@ const helpers = {
     if (wowApiResult.media.assets) {
       mapped.media.avatar = wowApiResult.media.assets.find(asset => asset.key === 'avatar').value;
       mapped.media.inset = wowApiResult.media.assets.find(asset => asset.key === 'inset').value;
-      mapped.media.main = wowApiResult.media.assets.find(asset => asset.key === 'main').value;
       mapped.media.mainRaw = wowApiResult.media.assets.find(asset => asset.key === 'main-raw').value;
     }
 
