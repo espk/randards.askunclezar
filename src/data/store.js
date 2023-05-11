@@ -327,91 +327,90 @@ const helpers = {
 
 const currentRaid = [
   {
-    name: 'Vija',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Hoofnshield',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Guillak',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Khajitzak',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Lucinde',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Cretan',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Nikkoh',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Forcas',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Cizrena',
-    realm: 'Dentarg'
-  },
-  {
-    name: 'Actherion',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Winchu',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Arthricia',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Shenanigins',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Nelliël',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Taal',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Ulquiorrà',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Terc',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Guenevere',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Monklezar',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Karris',
-    realm: 'Whisperwind'
-  },
-  {
     name: 'Ackroma',
     realm: 'Whisperwind'
   },
   
-
+  {
+    name: 'Actherion',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Arthricia',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Cizrena',
+    realm: 'Dentarg'
+  },
+  
+  {
+    name: 'Cretan',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Forcas',
+    realm: 'Dentarg'
+  },
+  
+  {
+    name: 'Guenevere',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Guillak',
+    realm: 'Dentarg'
+  },
+  
+  {
+    name: 'Harribel',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Karris',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Khajitzak',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Lucinde',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Monklezar',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Nikkoh',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Pallypants',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Vija',
+    realm: 'Whisperwind'
+  },
+  
+  {
+    name: 'Winchu',
+    realm: 'Whisperwind'
+  },
+  
 ]
 
 const nonOffHandEquipmentSlots = ['head', 'neck', 'shoulder', 'back', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'finger1', 'finger2', 'trinket1', 'trinket2', 'mainHand']
