@@ -2,6 +2,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import armory from "../data/armory"
+import globals from "../data/globals"
 
 
 Vue.use(Vuex)
@@ -211,18 +212,28 @@ const helpers = {
       mapped.media.mainRaw = wowApiResult.media.assets.find(asset => asset.key === 'main-raw').value;
     }
 
+    
+    
+    
+
     return mapped;
   },
 
   mappedItem(item) {
     if (item === undefined) { return {} }
 
+    var upgradeIds = globals.itemBonusIds()
+
     var mapped = {
       id: item.item.id,
       quality: item.quality.name,
       itemLevel: item.level.value,
       isTier: (item.set !== undefined),
-      sockets: []
+      sockets: [],
+      bonus: [],
+      upgradable: false,
+      upgradeLevel: '0/0',
+      maxUpgrade: 0
     };
 
     if (item.slot.name === 'Main Hand') {
@@ -250,6 +261,18 @@ const helpers = {
         }
       })
     }
+
+    mapped.bonus.forEach(id => {
+      var match = upgradeIds.find(f => f === id)
+      if (match != undefined) {
+        var lookup = globals.itemBonuses.find(f => f.id === match)
+
+        mapped.upgradable = true
+        mapped.upgradeLevel = `${lookup.upgrade.level}/${lookup.upgrade.max}`
+        mapped.maxUpgrade = globals.upgradeMax(lookup.upgrade.name)
+      }
+
+    })
 
     return mapped
   },
