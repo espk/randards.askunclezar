@@ -19,98 +19,117 @@
       v-bind:item="'head'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.head"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'neck'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.neck"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'shoulder'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.shoulder"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'back'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.back"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'chest'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.chest"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'shirt'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.shirt"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'tabard'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.tabard"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'wrist'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.wrist"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'hands'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.hands"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'waist'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.waist"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'legs'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.legs"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'feet'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.feet"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'finger1'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.finger1"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'finger2'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.finger2"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'trinket1'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.trinket1"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'trinket2'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.trinket2"
+      v-bind:currentView="currentView"
     />
     <WowCharacterItem
       v-bind:item="'two-hand'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.mainHand"
+      v-bind:currentView="currentView"
       v-if="hasTwoHander"
     />
     <WowCharacterItem
       v-bind:item="'main-hand'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.mainHand"
+      v-bind:currentView="currentView"
       v-if="!hasTwoHander"
     />
     <WowCharacterItem
       v-bind:item="'off-hand'"
 			v-bind:characterId="characterId"
       v-bind:wow-character-item="WowCharacter.items.offHand"
+      v-bind:currentView="currentView"
       v-if="!hasTwoHander"
     />
     <div class="grid-item-avatar">
@@ -133,6 +152,7 @@ export default {
   },
   props: {
     WowCharacter: Object,
+    currentView: String,
   },
   mounted() {},
   computed: mapState({

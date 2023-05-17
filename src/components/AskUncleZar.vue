@@ -21,6 +21,9 @@
       </div>
     </div>
     <div class="group">
+      <div class="filter-container">hi</div>
+    </div>
+    <div class="group">
       <div class="application-container">
         <div class="grid-container">
           <div class="grid-header">
@@ -89,6 +92,7 @@
           >
             <wow-character
               v-bind:wow-character="WowCharacter"
+              v-bind:currentView="currentView"
               @removeCharacter="handleRemoveCharacter"
             />
           </div>
@@ -126,7 +130,7 @@ export default {
       realm: "",
     };
   },
-  computed: mapState(["raid", "itemLevels", "loadState", "currentFlavorText"]),
+  computed: mapState(["raid", "itemLevels", "loadState", "currentFlavorText", "currentView"]),
   methods: {
     loadRaid: function () {
       this.$store.commit("shuffleText");

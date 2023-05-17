@@ -1,7 +1,13 @@
 <template>
-  <div v-bind:class="itemLevelClass" class="grid-item">
-    <a href="#" v-bind:rel="wowheadLink">{{cleanedCharacterItem.itemLevel}}</a>
-    <div v-if="cleanedCharacterItem.isTier" class="tier-indicator">tier</div>
+  <div class="grid-item" v-bind:class="itemClass">
+    <div v-bind:class="itemLevelClass" v-if="currentView === 'ilvl'">
+      <a href="#" v-bind:rel="wowheadLink">{{cleanedCharacterItem.itemLevel}}</a>
+      <div v-if="cleanedCharacterItem.isTier" class="tier-indicator">tier</div>
+    </div>
+    <div v-if="currentView === 'upgrade'">
+      <a href="#" v-bind:rel="wowheadLink">{{upgradeText}}</a>
+      <div class="tier-indicator">{{upgradeSecondaryText}}</div>
+    </div>
   </div>
 </template>
 
@@ -13,7 +19,8 @@ export default {
   props: {
     WowCharacterItem: Object,
     item: String,
-    characterId: String
+    characterId: String,
+    currentView: String
   },
   computed: mapState({
     itemLevels: state => state.itemLevels,
@@ -26,8 +33,29 @@ export default {
 
       return this.WowCharacterItem;
     },
-    itemLevelClass: function() {
+    upgradeText: function() {
+      if (this.WowCharacterItem.maxUpgrade > this.cleanedCharacterItem.itemLevel) {
+        return this.WowCharacterItem.maxUpgrade
+      } else {
+        return '-'
+      }
+
+    },
+    upgradeSecondaryText: function() {
+      if (this.WowCharacterItem.maxUpgrade > this.cleanedCharacterItem.itemLevel) {
+        return this.WowCharacterItem.upgradeLevel
+      } else {
+        return ''
+      }
+
+    },
+    itemClass: function() {
       var style = "grid-item-" + this.item;
+
+      return style;
+    }, 
+    itemLevelClass: function() {
+      var style = "";
       var itemForLookup = this.item.replace("main-hand", "mainHand").replace("two-hand", "mainHand").replace("off-hand", "offHand")
       if (this.WowCharacterItem.isTier)
         style += " tier"
@@ -36,6 +64,7 @@ export default {
 
       return style;
     },
+
     wowheadLink: function() {
       var link = "item=" + this.WowCharacterItem.id;
 

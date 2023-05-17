@@ -22,6 +22,7 @@ export default new Vuex.Store({
       loading: false,
       loadingCount: 0
     },
+    currentView: 'upgrade',
 
     character: '',
     realm: '',
