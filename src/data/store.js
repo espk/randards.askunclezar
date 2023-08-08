@@ -434,7 +434,15 @@ const currentRaid = [
     name: 'Winchu',
     realm: 'Whisperwind'
   },
-  
+  {
+    name: 'Nelliël',
+    realm: 'Whisperwind'
+  },
+  {
+    name: 'Terc',
+    realm: 'Whisperwind'
+  },
+   
 ]
 
 const nonOffHandEquipmentSlots = ['head', 'neck', 'shoulder', 'back', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'finger1', 'finger2', 'trinket1', 'trinket2', 'mainHand']
