@@ -21,7 +21,15 @@
       </div>
     </div>
     <div class="group">
-      <div class="filter-container">hi</div>
+      <div class="filter-container">
+        <div class="mode-filter">
+          view mode: 
+          
+          <button @click="setFilter('ilvl')" :class="isActiveFilter('ilvl')">ilvl</button> 
+          .
+          <button @click="setFilter('upgrade')" :class="isActiveFilter('upgrade')">upgrades</button> 
+        </div>
+      </div>
     </div>
     <div class="group">
       <div class="application-container">
@@ -151,10 +159,19 @@ export default {
       this.realm = "";
     },
 
+    setFilter: function (filter) {
+      this.$store.commit("setCurrentView", filter)
+    },
+
+    isActiveFilter: function (filter) {
+      return (this.currentView === filter) ? "active " : "" 
+    },
+
     handleRemoveCharacter: function (character) {
       this.$store.commit("removeCharacter", character);
       this.$store.commit("calculateStatistics");
     },
+
   },
   mounted: function () {
     this.$store.dispatch("pingApi");
@@ -240,6 +257,39 @@ footer {
   font-size: 1px;
   padding: 0;
   margin: 0;
+}
+
+.filter-container {
+  height: 20px;
+}
+.mode-filter {
+  margin: -16px 10px 10px 0;
+  text-align: right;
+  border-bottom: 1px solid #222;
+}
+.mode-filter button {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 10px;
+
+}
+.mode-filter button.all {
+  color: #ccc;
+}
+
+.mode-filter button.active {
+  background: #039;
+}
+.mode-filter button:hover, .mode-filter button.active:hover {
+  color: #ddd;
+  background: #36c;
+
+}
+.mode-filter button:focus {
+  outline: 0;
 }
 
 .grid-body,

@@ -1,6 +1,6 @@
 <template>
   <div class="grid-item" v-bind:class="itemClass">
-    <div v-bind:class="itemLevelClass" v-if="currentView === 'ilvl'">
+    <div v-if="currentView === 'ilvl'">
       <a href="#" v-bind:rel="wowheadLink">{{cleanedCharacterItem.itemLevel}}</a>
       <div v-if="cleanedCharacterItem.isTier" class="tier-indicator">tier</div>
     </div>
@@ -35,7 +35,9 @@ export default {
     },
     upgradeText: function() {
       if (this.WowCharacterItem.maxUpgrade > this.cleanedCharacterItem.itemLevel) {
-        return this.WowCharacterItem.maxUpgrade
+        return this.WowCharacterItem.itemLevel
+      } else if (this.WowCharacterItem.maxUpgrade === this.cleanedCharacterItem.itemLevel) {
+        return this.WowCharacterItem.itemLevel
       } else {
         return '-'
       }
@@ -43,27 +45,24 @@ export default {
     },
     upgradeSecondaryText: function() {
       if (this.WowCharacterItem.maxUpgrade > this.cleanedCharacterItem.itemLevel) {
-        return this.WowCharacterItem.upgradeLevel
+        return this.WowCharacterItem.upgradeTrack
+      } else if (this.WowCharacterItem.maxUpgrade === this.cleanedCharacterItem.itemLevel) {
+        return this.WowCharacterItem.upgradeTrack
       } else {
         return ''
       }
 
     },
     itemClass: function() {
-      var style = "grid-item-" + this.item;
+      var style = "grid-item-" + this.item + " tier";
 
-      return style;
-    }, 
-    itemLevelClass: function() {
-      var style = "";
       var itemForLookup = this.item.replace("main-hand", "mainHand").replace("two-hand", "mainHand").replace("off-hand", "offHand")
-      if (this.WowCharacterItem.isTier)
-        style += " tier"
-      if (this.WowCharacterItem !== undefined)
+      //if (this.WowCharacterItem.isTier)
+      if ((this.WowCharacterItem !== undefined) && ((this.currentView === 'ilvl') || (this.currentView === 'upgrade' && this.WowCharacterItem.upgradeTrack !== undefined && this.WowCharacterItem.maxUpgrade > this.cleanedCharacterItem.itemLevel)))
         style += " percent-" + this.itemLevels[this.characterId][itemForLookup]
 
       return style;
-    },
+    }, 
 
     wowheadLink: function() {
       var link = "item=" + this.WowCharacterItem.id;

@@ -22,7 +22,7 @@ export default new Vuex.Store({
       loading: false,
       loadingCount: 0
     },
-    currentView: 'upgrade',
+    currentView: 'ilvl',
 
     character: '',
     realm: '',
@@ -65,6 +65,9 @@ export default new Vuex.Store({
     removeCharacter(state, payload) {
       var index = state.raid.findIndex(e => { return ((e.name === payload.name) && (e.realm === payload.realm)) })
       state.raid.splice(index, 1)
+    },
+    setCurrentView(state, payload) {
+      state.currentView = payload
     },
     calculateStatistics(state) {
       state.raid.forEach((character) => {
@@ -213,10 +216,6 @@ const helpers = {
       mapped.media.mainRaw = wowApiResult.media.assets.find(asset => asset.key === 'main-raw').value;
     }
 
-    
-    
-    
-
     return mapped;
   },
 
@@ -270,6 +269,7 @@ const helpers = {
 
         mapped.upgradable = true
         mapped.upgradeLevel = `${lookup.upgrade.level}/${lookup.upgrade.max}`
+        mapped.upgradeTrack = lookup.upgrade.name
         mapped.maxUpgrade = globals.upgradeMax(lookup.upgrade.name)
       }
 

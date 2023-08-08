@@ -499,7 +499,8 @@ export default {
               "seasonId": 21
           },
           "quality": 4
-      }
+      },
+
   ],
   
   itemBonusIds: function() {
@@ -514,5 +515,6 @@ export default {
     if (name === 'Veteran') { return 424 }
     if (name === 'Champion') { return 437 }
     if (name === 'Hero') { return 441 }
+    if (name === 'Myth') { return 447 }
   }
 }
