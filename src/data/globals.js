@@ -500,7 +500,45 @@ export default {
           },
           "quality": 4
       },
-
+      {
+        "id": 9380,
+        "upgrade": {
+            "level": 1,
+            "max": 3,
+            "group": 295,
+            "name": "Myth",
+            "bonusId": 9380,
+            "itemLevel": 441,
+            "seasonId": 21
+        },
+        "quality": 4
+    },
+    {
+        "id": 9381,
+        "upgrade": {
+            "level": 2,
+            "max": 3,
+            "group": 295,
+            "name": "Myth",
+            "bonusId": 9381,
+            "itemLevel": 444,
+            "seasonId": 21
+        },
+        "quality": 4
+    },
+    {
+        "id": 9382,
+        "upgrade": {
+            "level": 3,
+            "max": 3,
+            "group": 295,
+            "name": "Myth",
+            "bonusId": 9382,
+            "itemLevel": 447,
+            "seasonId": 21
+        },
+        "quality": 4
+    }
   ],
   
   itemBonusIds: function() {
