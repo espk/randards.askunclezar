@@ -168,7 +168,9 @@ export default {
     },
     hasTwoHander: function () {
       return (this.WowCharacter.items.mainHand.weaponType === "Two-Hand" ||
-              this.WowCharacter.items.mainHand.weaponType === "Ranged");
+              (this.WowCharacter.items.mainHand.weaponType === "Ranged" &&
+               this.WowCharacter.items.mainHand.weaponSubType !== "Wand")
+             );
     },
     backgroundStyle: function() {
       return { 

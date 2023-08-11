@@ -238,6 +238,7 @@ const helpers = {
 
     if (item.slot.name === 'Main Hand') {
       mapped.weaponType = item.inventory_type.name;
+      mapped.weaponSubType = item.item_subclass.name;
     }
 
     if (item.azerite_details) {
