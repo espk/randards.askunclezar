@@ -390,9 +390,9 @@ const currentRaid = [
     name: 'Guillak',
     realm: 'Dentarg'
   },
-  
+
   {
-    name: 'Harribel',
+    name: 'Johnmcfly',
     realm: 'Whisperwind'
   },
   
@@ -415,6 +415,11 @@ const currentRaid = [
     name: 'Monklezar',
     realm: 'Whisperwind'
   },
+
+  {
+    name: 'Nelliël',
+    realm: 'Whisperwind'
+  },
   
   {
     name: 'Nikkoh',
@@ -427,20 +432,17 @@ const currentRaid = [
   },
   
   {
+    name: 'Terc',
+    realm: 'Whisperwind'
+  },
+
+  {
     name: 'Vija',
     realm: 'Whisperwind'
   },
   
   {
     name: 'Winchu',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Nelliël',
-    realm: 'Whisperwind'
-  },
-  {
-    name: 'Terc',
     realm: 'Whisperwind'
   },
    
