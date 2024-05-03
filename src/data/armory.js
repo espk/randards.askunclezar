@@ -18,5 +18,9 @@ export default {
   getGuild() {
     return axios.get(this.apiRoot + `/api/guildcharacters`)
   },
+
+  getRioGuild() {
+    return axios.get(this.apiRoot + `/api/guildmythicdungeons/Evil%20SuperPoweredKitties/season-df-4`)
+  },
   
 }

@@ -104,9 +104,31 @@ export default new Vuex.Store({
     getCurrentRaid(context) {
       context.commit('clearData')
 
+      var guild = []
+
+      armory.getRioGuild()
+        .then(result => {
+          
+          result.data.rankings.rankedCharacters.forEach(toon => { 
+            guild.push({ name: toon.character.name, realm: toon.character.realm.name }) 
+          })
+
+          guild.forEach(member => {
+            context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
+          })
+
+        })
+        .catch(error => {
+          console.log(error)
+        })
+
+      
+
+      /*
       currentRaid.forEach(member => {
         context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
       });
+      */
     },
     getGuild(context) {
       context.commit('clearData')
@@ -133,9 +155,11 @@ export default new Vuex.Store({
           console.log(error)
         })
 
+        /*
       guild.forEach(member => {
         context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
       });
+      */
     },
     loadSingleCharacter(context, payload) {
 
@@ -443,6 +467,11 @@ const currentRaid = [
   
   {
     name: 'Winchu',
+    realm: 'Whisperwind'
+  },
+
+  {
+    name: 'Tyrdannon',
     realm: 'Whisperwind'
   },
    

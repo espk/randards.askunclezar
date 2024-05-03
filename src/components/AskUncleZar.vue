@@ -3,7 +3,7 @@
     <div class="group">
       <div class="contol-area">
         <div class="load-raid">
-          <button @click="loadRaid()">Load Raid</button>
+          <button @click="loadRaid()">Load M+</button>
         </div>
         <div class="load-guild">
           <button @click="loadGuild()">Load Guild</button>
