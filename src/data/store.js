@@ -103,6 +103,7 @@ export default new Vuex.Store({
   actions: {
     getCurrentRaid(context) {
       context.commit('clearData')
+      context.commit('setLoading', true)
 
       var guild = []
 
@@ -122,16 +123,11 @@ export default new Vuex.Store({
           console.log(error)
         })
 
-      
-
-      /*
-      currentRaid.forEach(member => {
-        context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
-      });
-      */
     },
     getGuild(context) {
       context.commit('clearData')
+      context.commit('setLoading', true)
+
 
       var guild = []
 
@@ -140,7 +136,7 @@ export default new Vuex.Store({
           
           result.data.members.forEach(toon => { 
             
-            if (toon.character.level === 70) {
+            if (toon.character.level === 80) {
               console.log(toon)
               guild.push({ name: toon.character.name, realm: toon.character.realm.slug }) 
             }
@@ -155,11 +151,6 @@ export default new Vuex.Store({
           console.log(error)
         })
 
-        /*
-      guild.forEach(member => {
-        context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
-      });
-      */
     },
     loadSingleCharacter(context, payload) {
 
