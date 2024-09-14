@@ -238,6 +238,7 @@ const helpers = {
     if (item === undefined) { return {} }
 
     var upgradeIds = globals.itemBonusIds()
+    console.log(upgradeIds)
 
     var mapped = {
       id: item.item.id,
