@@ -32,9 +32,9 @@ export default new Vuex.Store({
     flavorText: [
       'rolling tranq...',
       'afk steak...',
-      'looking up alcohol pics on discord...',
       'blaming Randy...',
-      'herding cats...'
+      'herding cats...',
+      'omg no hamburgers...'
     ],
 
   },
@@ -105,8 +105,12 @@ export default new Vuex.Store({
       context.commit('clearData')
       context.commit('setLoading', true)
 
-      var guild = []
+      var guild = currentRaid
 
+      guild.forEach(member => {
+        context.dispatch('loadSingleCharacter', { character: member.name, realm: member.realm })
+      })
+      /*
       armory.getRioGuild()
         .then(result => {
           
@@ -122,6 +126,7 @@ export default new Vuex.Store({
         .catch(error => {
           console.log(error)
         })
+        */
 
     },
     getGuild(context) {
@@ -137,7 +142,6 @@ export default new Vuex.Store({
           result.data.members.forEach(toon => { 
             
             if (toon.character.level === 80) {
-              console.log(toon)
               guild.push({ name: toon.character.name, realm: toon.character.realm.slug }) 
             }
           })
@@ -238,7 +242,6 @@ const helpers = {
     if (item === undefined) { return {} }
 
     var upgradeIds = globals.itemBonusIds()
-    console.log(upgradeIds)
 
     var mapped = {
       id: item.item.id,
@@ -367,13 +370,9 @@ const helpers = {
 
 
 const currentRaid = [
+
   {
-    name: 'Ackroma',
-    realm: 'Whisperwind'
-  },
-  
-  {
-    name: 'Actherion',
+    name: 'Auriok',
     realm: 'Whisperwind'
   },
   
@@ -398,23 +397,13 @@ const currentRaid = [
   },
   
   {
-    name: 'Guenevere',
+    name: 'Tallerazure',
     realm: 'Whisperwind'
   },
   
   {
     name: 'Guillak',
     realm: 'Dentarg'
-  },
-
-  {
-    name: 'Johnmcfly',
-    realm: 'Whisperwind'
-  },
-  
-  {
-    name: 'Karris',
-    realm: 'Whisperwind'
   },
   
   {
@@ -428,27 +417,12 @@ const currentRaid = [
   },
   
   {
-    name: 'Monklezar',
-    realm: 'Whisperwind'
-  },
-
-  {
-    name: 'Nelliël',
+    name: 'Zarjani',
     realm: 'Whisperwind'
   },
   
   {
     name: 'Nikkoh',
-    realm: 'Whisperwind'
-  },
-  
-  {
-    name: 'Pallypants',
-    realm: 'Whisperwind'
-  },
-  
-  {
-    name: 'Terc',
     realm: 'Whisperwind'
   },
 
@@ -463,7 +437,12 @@ const currentRaid = [
   },
 
   {
-    name: 'Tyrdannon',
+    name: 'Myrym',
+    realm: 'Whisperwind'
+  },
+
+  {
+    name: 'Arandir',
     realm: 'Whisperwind'
   },
    
