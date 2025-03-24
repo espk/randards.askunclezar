@@ -20,622 +20,6 @@ export default {
 
     itemBonuses: [
         {
-            "id": 10256,
-            "upgrade": {
-                "group": 333,
-                "level": 6,
-                "max": 6,
-                "name": "Hero",
-                "fullName": "Hero 6/6",
-                "bonusId": 10256,
-                "itemLevel": 626,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10257,
-            "upgrade": {
-                "group": 334,
-                "level": 4,
-                "max": 6,
-                "name": "Myth",
-                "fullName": "Myth 4/6",
-                "bonusId": 10257,
-                "itemLevel": 632,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10258,
-            "upgrade": {
-                "group": 334,
-                "level": 3,
-                "max": 6,
-                "name": "Myth",
-                "fullName": "Myth 3/6",
-                "bonusId": 10258,
-                "itemLevel": 629,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10259,
-            "upgrade": {
-                "group": 334,
-                "level": 2,
-                "max": 6,
-                "name": "Myth",
-                "fullName": "Myth 2/6",
-                "bonusId": 10259,
-                "itemLevel": 626,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10260,
-            "upgrade": {
-                "group": 334,
-                "level": 1,
-                "max": 6,
-                "name": "Myth",
-                "fullName": "Myth 1/6",
-                "bonusId": 10260,
-                "itemLevel": 623,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10261,
-            "upgrade": {
-                "group": 333,
-                "level": 5,
-                "max": 6,
-                "name": "Hero",
-                "fullName": "Hero 5/6",
-                "bonusId": 10261,
-                "itemLevel": 623,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10262,
-            "upgrade": {
-                "group": 333,
-                "level": 4,
-                "max": 6,
-                "name": "Hero",
-                "fullName": "Hero 4/6",
-                "bonusId": 10262,
-                "itemLevel": 619,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10263,
-            "upgrade": {
-                "group": 333,
-                "level": 3,
-                "max": 6,
-                "name": "Hero",
-                "fullName": "Hero 3/6",
-                "bonusId": 10263,
-                "itemLevel": 616,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10264,
-            "upgrade": {
-                "group": 333,
-                "level": 2,
-                "max": 6,
-                "name": "Hero",
-                "fullName": "Hero 2/6",
-                "bonusId": 10264,
-                "itemLevel": 613,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10265,
-            "upgrade": {
-                "group": 333,
-                "level": 1,
-                "max": 6,
-                "name": "Hero",
-                "fullName": "Hero 1/6",
-                "bonusId": 10265,
-                "itemLevel": 610,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10266,
-            "upgrade": {
-                "group": 332,
-                "level": 8,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 8/8",
-                "bonusId": 10266,
-                "itemLevel": 619,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10267,
-            "upgrade": {
-                "group": 332,
-                "level": 7,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 7/8",
-                "bonusId": 10267,
-                "itemLevel": 616,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10268,
-            "upgrade": {
-                "group": 332,
-                "level": 6,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 6/8",
-                "bonusId": 10268,
-                "itemLevel": 613,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10269,
-            "upgrade": {
-                "group": 332,
-                "level": 5,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 5/8",
-                "bonusId": 10269,
-                "itemLevel": 610,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10270,
-            "upgrade": {
-                "group": 332,
-                "level": 4,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 4/8",
-                "bonusId": 10270,
-                "itemLevel": 606,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10271,
-            "upgrade": {
-                "group": 332,
-                "level": 3,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 3/8",
-                "bonusId": 10271,
-                "itemLevel": 603,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10272,
-            "upgrade": {
-                "group": 332,
-                "level": 2,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 2/8",
-                "bonusId": 10272,
-                "itemLevel": 600,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10273,
-            "upgrade": {
-                "group": 332,
-                "level": 1,
-                "max": 8,
-                "name": "Champion",
-                "fullName": "Champion 1/8",
-                "bonusId": 10273,
-                "itemLevel": 597,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10274,
-            "upgrade": {
-                "group": 331,
-                "level": 8,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 8/8",
-                "bonusId": 10274,
-                "itemLevel": 606,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10275,
-            "upgrade": {
-                "group": 331,
-                "level": 7,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 7/8",
-                "bonusId": 10275,
-                "itemLevel": 603,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10276,
-            "upgrade": {
-                "group": 331,
-                "level": 6,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 6/8",
-                "bonusId": 10276,
-                "itemLevel": 600,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10277,
-            "upgrade": {
-                "group": 331,
-                "level": 5,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 5/8",
-                "bonusId": 10277,
-                "itemLevel": 597,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10278,
-            "upgrade": {
-                "group": 331,
-                "level": 4,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 4/8",
-                "bonusId": 10278,
-                "itemLevel": 593,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10279,
-            "upgrade": {
-                "group": 331,
-                "level": 3,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 3/8",
-                "bonusId": 10279,
-                "itemLevel": 590,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10280,
-            "upgrade": {
-                "group": 331,
-                "level": 2,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 2/8",
-                "bonusId": 10280,
-                "itemLevel": 587,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10281,
-            "upgrade": {
-                "group": 331,
-                "level": 1,
-                "max": 8,
-                "name": "Veteran",
-                "fullName": "Veteran 1/8",
-                "bonusId": 10281,
-                "itemLevel": 584,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10282,
-            "upgrade": {
-                "group": 329,
-                "level": 8,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 8/8",
-                "bonusId": 10282,
-                "itemLevel": 580,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10283,
-            "upgrade": {
-                "group": 329,
-                "level": 7,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 7/8",
-                "bonusId": 10283,
-                "itemLevel": 577,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10284,
-            "upgrade": {
-                "group": 329,
-                "level": 6,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 6/8",
-                "bonusId": 10284,
-                "itemLevel": 574,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10285,
-            "upgrade": {
-                "group": 329,
-                "level": 5,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 5/8",
-                "bonusId": 10285,
-                "itemLevel": 571,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10286,
-            "upgrade": {
-                "group": 329,
-                "level": 4,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 4/8",
-                "bonusId": 10286,
-                "itemLevel": 567,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10287,
-            "upgrade": {
-                "group": 329,
-                "level": 3,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 3/8",
-                "bonusId": 10287,
-                "itemLevel": 564,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10288,
-            "upgrade": {
-                "group": 329,
-                "level": 2,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 2/8",
-                "bonusId": 10288,
-                "itemLevel": 561,
-                "seasonId": 24
-            },
-            "quality": 2
-        },
-        {
-            "id": 10289,
-            "upgrade": {
-                "group": 329,
-                "level": 1,
-                "max": 8,
-                "name": "Explorer",
-                "fullName": "Explorer 1/8",
-                "bonusId": 10289,
-                "itemLevel": 558,
-                "seasonId": 24
-            },
-            "quality": 2
-        },
-        {
-            "id": 10290,
-            "upgrade": {
-                "group": 330,
-                "level": 8,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 8/8",
-                "bonusId": 10290,
-                "itemLevel": 593,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10291,
-            "upgrade": {
-                "group": 330,
-                "level": 7,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 7/8",
-                "bonusId": 10291,
-                "itemLevel": 590,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10292,
-            "upgrade": {
-                "group": 330,
-                "level": 6,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 6/8",
-                "bonusId": 10292,
-                "itemLevel": 587,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10293,
-            "upgrade": {
-                "group": 330,
-                "level": 5,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 5/8",
-                "bonusId": 10293,
-                "itemLevel": 584,
-                "seasonId": 24
-            },
-            "quality": 4
-        },
-        {
-            "id": 10294,
-            "upgrade": {
-                "group": 330,
-                "level": 4,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 4/8",
-                "bonusId": 10294,
-                "itemLevel": 580,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10295,
-            "upgrade": {
-                "group": 330,
-                "level": 3,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 3/8",
-                "bonusId": 10295,
-                "itemLevel": 577,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10296,
-            "upgrade": {
-                "group": 330,
-                "level": 2,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 2/8",
-                "bonusId": 10296,
-                "itemLevel": 574,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10297,
-            "upgrade": {
-                "group": 330,
-                "level": 1,
-                "max": 8,
-                "name": "Adventurer",
-                "fullName": "Adventurer 1/8",
-                "bonusId": 10297,
-                "itemLevel": 571,
-                "seasonId": 24
-            },
-            "quality": 3
-        },
-        {
-            "id": 10298,
-            "quality": 4,
-            "upgrade": {
-                "group": 334,
-                "level": 5,
-                "max": 6,
-                "name": "Myth",
-                "fullName": "Myth 5/6",
-                "bonusId": 10298,
-                "itemLevel": 636,
-                "seasonId": 24
-            }
-        },
-        {
-            "id": 10299,
-            "quality": 4,
-            "upgrade": {
-                "group": 334,
-                "level": 6,
-                "max": 6,
-                "name": "Myth",
-                "fullName": "Myth 6/6",
-                "bonusId": 10299,
-                "itemLevel": 639,
-                "seasonId": 24
-            }
-        },
-        {
             "id": 10305,
             "upgrade": {
                 "group": 342,
@@ -647,7 +31,8 @@ export default {
                 "itemLevel": 467,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10306,
@@ -661,7 +46,8 @@ export default {
                 "itemLevel": 470,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10307,
@@ -675,7 +61,8 @@ export default {
                 "itemLevel": 473,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10308,
@@ -689,7 +76,8 @@ export default {
                 "itemLevel": 476,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10309,
@@ -703,7 +91,8 @@ export default {
                 "itemLevel": 480,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10310,
@@ -717,7 +106,8 @@ export default {
                 "itemLevel": 483,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10311,
@@ -731,7 +121,8 @@ export default {
                 "itemLevel": 486,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10312,
@@ -745,7 +136,8 @@ export default {
                 "itemLevel": 489,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10313,
@@ -759,7 +151,8 @@ export default {
                 "itemLevel": 493,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10314,
@@ -773,7 +166,8 @@ export default {
                 "itemLevel": 496,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10315,
@@ -787,7 +181,8 @@ export default {
                 "itemLevel": 499,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10316,
@@ -801,7 +196,8 @@ export default {
                 "itemLevel": 502,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10317,
@@ -815,7 +211,8 @@ export default {
                 "itemLevel": 506,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10318,
@@ -829,7 +226,8 @@ export default {
                 "itemLevel": 509,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10319,
@@ -843,7 +241,8 @@ export default {
                 "itemLevel": 512,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10320,
@@ -857,7 +256,8 @@ export default {
                 "itemLevel": 515,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10321,
@@ -871,7 +271,8 @@ export default {
                 "itemLevel": 454,
                 "seasonId": 23
             },
-            "quality": 2
+            "quality": 2,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10322,
@@ -885,7 +286,8 @@ export default {
                 "itemLevel": 457,
                 "seasonId": 23
             },
-            "quality": 2
+            "quality": 2,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10323,
@@ -899,7 +301,8 @@ export default {
                 "itemLevel": 460,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10324,
@@ -913,7 +316,8 @@ export default {
                 "itemLevel": 463,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10325,
@@ -927,7 +331,8 @@ export default {
                 "itemLevel": 467,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10326,
@@ -941,7 +346,8 @@ export default {
                 "itemLevel": 470,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10327,
@@ -955,7 +361,8 @@ export default {
                 "itemLevel": 473,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10328,
@@ -969,7 +376,8 @@ export default {
                 "itemLevel": 476,
                 "seasonId": 23
             },
-            "quality": 3
+            "quality": 3,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10329,
@@ -983,7 +391,8 @@ export default {
                 "itemLevel": 506,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10330,
@@ -997,7 +406,9 @@ export default {
                 "itemLevel": 509,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4",
+            "level": 0
         },
         {
             "id": 10331,
@@ -1011,7 +422,8 @@ export default {
                 "itemLevel": 512,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10332,
@@ -1025,7 +437,8 @@ export default {
                 "itemLevel": 515,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10333,
@@ -1039,7 +452,8 @@ export default {
                 "itemLevel": 519,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10334,
@@ -1053,7 +467,8 @@ export default {
                 "itemLevel": 522,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10335,
@@ -1067,7 +482,8 @@ export default {
                 "itemLevel": 519,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10336,
@@ -1081,7 +497,8 @@ export default {
                 "itemLevel": 522,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10337,
@@ -1095,7 +512,8 @@ export default {
                 "itemLevel": 525,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10338,
@@ -1109,7 +527,8 @@ export default {
                 "itemLevel": 528,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10341,
@@ -1123,7 +542,8 @@ export default {
                 "itemLevel": 480,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10342,
@@ -1137,7 +557,8 @@ export default {
                 "itemLevel": 483,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10343,
@@ -1151,7 +572,8 @@ export default {
                 "itemLevel": 486,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10344,
@@ -1165,7 +587,8 @@ export default {
                 "itemLevel": 489,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10345,
@@ -1179,7 +602,8 @@ export default {
                 "itemLevel": 493,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10346,
@@ -1193,7 +617,8 @@ export default {
                 "itemLevel": 496,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10347,
@@ -1207,7 +632,8 @@ export default {
                 "itemLevel": 499,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10348,
@@ -1221,7 +647,8 @@ export default {
                 "itemLevel": 502,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10407,
@@ -1235,7 +662,8 @@ export default {
                 "itemLevel": 493,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10408,
@@ -1249,7 +677,8 @@ export default {
                 "itemLevel": 496,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10409,
@@ -1263,7 +692,8 @@ export default {
                 "itemLevel": 499,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10410,
@@ -1277,7 +707,8 @@ export default {
                 "itemLevel": 502,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10411,
@@ -1291,7 +722,8 @@ export default {
                 "itemLevel": 506,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10412,
@@ -1305,7 +737,8 @@ export default {
                 "itemLevel": 509,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10413,
@@ -1319,7 +752,8 @@ export default {
                 "itemLevel": 512,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10414,
@@ -1333,7 +767,8 @@ export default {
                 "itemLevel": 515,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10415,
@@ -1347,7 +782,8 @@ export default {
                 "itemLevel": 519,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10416,
@@ -1361,7 +797,8 @@ export default {
                 "itemLevel": 522,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10417,
@@ -1375,7 +812,8 @@ export default {
                 "itemLevel": 525,
                 "seasonId": 23
             },
-            "quality": 4
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
         },
         {
             "id": 10418,
@@ -1389,7 +827,624 @@ export default {
                 "itemLevel": 528,
                 "seasonId": 23
             },
+            "quality": 4,
+            "tag": "Dragonflight Season 4"
+        },
+        {
+            "id": 11942,
+            "upgrade": {
+                "group": 437,
+                "level": 1,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 1/8",
+                "bonusId": 11942,
+                "itemLevel": 597,
+                "seasonId": 25
+            },
+            "quality": 2
+        },
+        {
+            "id": 11943,
+            "upgrade": {
+                "group": 437,
+                "level": 2,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 2/8",
+                "bonusId": 11943,
+                "itemLevel": 600,
+                "seasonId": 25
+            },
+            "quality": 2
+        },
+        {
+            "id": 11944,
+            "upgrade": {
+                "group": 437,
+                "level": 3,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 3/8",
+                "bonusId": 11944,
+                "itemLevel": 603,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11945,
+            "upgrade": {
+                "group": 437,
+                "level": 4,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 4/8",
+                "bonusId": 11945,
+                "itemLevel": 606,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11946,
+            "upgrade": {
+                "group": 437,
+                "level": 5,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 5/8",
+                "bonusId": 11946,
+                "itemLevel": 610,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11947,
+            "upgrade": {
+                "group": 437,
+                "level": 6,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 6/8",
+                "bonusId": 11947,
+                "itemLevel": 613,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11948,
+            "upgrade": {
+                "group": 437,
+                "level": 7,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 7/8",
+                "bonusId": 11948,
+                "itemLevel": 616,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11949,
+            "upgrade": {
+                "group": 437,
+                "level": 8,
+                "max": 8,
+                "name": "Explorer",
+                "fullName": "Explorer 8/8",
+                "bonusId": 11949,
+                "itemLevel": 619,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11950,
+            "upgrade": {
+                "group": 438,
+                "level": 8,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 8/8",
+                "bonusId": 11950,
+                "itemLevel": 632,
+                "seasonId": 25
+            },
             "quality": 4
+        },
+        {
+            "id": 11951,
+            "upgrade": {
+                "group": 438,
+                "level": 1,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 1/8",
+                "bonusId": 11951,
+                "itemLevel": 610,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11952,
+            "upgrade": {
+                "group": 438,
+                "level": 2,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 2/8",
+                "bonusId": 11952,
+                "itemLevel": 613,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11953,
+            "upgrade": {
+                "group": 438,
+                "level": 3,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 3/8",
+                "bonusId": 11953,
+                "itemLevel": 616,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11954,
+            "upgrade": {
+                "group": 438,
+                "level": 4,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 4/8",
+                "bonusId": 11954,
+                "itemLevel": 619,
+                "seasonId": 25
+            },
+            "quality": 3
+        },
+        {
+            "id": 11955,
+            "upgrade": {
+                "group": 438,
+                "level": 5,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 5/8",
+                "bonusId": 11955,
+                "itemLevel": 623,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11956,
+            "upgrade": {
+                "group": 438,
+                "level": 6,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 6/8",
+                "bonusId": 11956,
+                "itemLevel": 626,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11957,
+            "upgrade": {
+                "group": 438,
+                "level": 7,
+                "max": 8,
+                "name": "Adventurer",
+                "fullName": "Adventurer 7/8",
+                "bonusId": 11957,
+                "itemLevel": 629,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11969,
+            "upgrade": {
+                "group": 439,
+                "level": 1,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 1/8",
+                "bonusId": 11969,
+                "itemLevel": 623,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11970,
+            "upgrade": {
+                "group": 439,
+                "level": 2,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 2/8",
+                "bonusId": 11970,
+                "itemLevel": 626,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11971,
+            "upgrade": {
+                "group": 439,
+                "level": 3,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 3/8",
+                "bonusId": 11971,
+                "itemLevel": 629,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11972,
+            "upgrade": {
+                "group": 439,
+                "level": 4,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 4/8",
+                "bonusId": 11972,
+                "itemLevel": 632,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11973,
+            "upgrade": {
+                "group": 439,
+                "level": 5,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 5/8",
+                "bonusId": 11973,
+                "itemLevel": 636,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11974,
+            "upgrade": {
+                "group": 439,
+                "level": 6,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 6/8",
+                "bonusId": 11974,
+                "itemLevel": 639,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11975,
+            "upgrade": {
+                "group": 439,
+                "level": 7,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 7/8",
+                "bonusId": 11975,
+                "itemLevel": 642,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11976,
+            "upgrade": {
+                "group": 439,
+                "level": 8,
+                "max": 8,
+                "name": "Veteran",
+                "fullName": "Veteran 8/8",
+                "bonusId": 11976,
+                "itemLevel": 645,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11977,
+            "upgrade": {
+                "group": 440,
+                "level": 1,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 1/8",
+                "bonusId": 11977,
+                "itemLevel": 636,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11978,
+            "upgrade": {
+                "group": 440,
+                "level": 2,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 2/8",
+                "bonusId": 11978,
+                "itemLevel": 639,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11979,
+            "upgrade": {
+                "group": 440,
+                "level": 3,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 3/8",
+                "bonusId": 11979,
+                "itemLevel": 642,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11980,
+            "upgrade": {
+                "group": 440,
+                "level": 4,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 4/8",
+                "bonusId": 11980,
+                "itemLevel": 645,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11981,
+            "upgrade": {
+                "group": 440,
+                "level": 5,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 5/8",
+                "bonusId": 11981,
+                "itemLevel": 649,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11982,
+            "upgrade": {
+                "group": 440,
+                "level": 6,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 6/8",
+                "bonusId": 11982,
+                "itemLevel": 652,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11983,
+            "upgrade": {
+                "group": 440,
+                "level": 7,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 7/8",
+                "bonusId": 11983,
+                "itemLevel": 655,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11984,
+            "upgrade": {
+                "group": 440,
+                "level": 8,
+                "max": 8,
+                "name": "Champion",
+                "fullName": "Champion 8/8",
+                "bonusId": 11984,
+                "itemLevel": 658,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11985,
+            "upgrade": {
+                "group": 441,
+                "level": 1,
+                "max": 6,
+                "name": "Hero",
+                "fullName": "Hero 1/6",
+                "bonusId": 11985,
+                "itemLevel": 649,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11986,
+            "upgrade": {
+                "group": 441,
+                "level": 2,
+                "max": 6,
+                "name": "Hero",
+                "fullName": "Hero 2/6",
+                "bonusId": 11986,
+                "itemLevel": 652,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11987,
+            "upgrade": {
+                "group": 441,
+                "level": 3,
+                "max": 6,
+                "name": "Hero",
+                "fullName": "Hero 3/6",
+                "bonusId": 11987,
+                "itemLevel": 655,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11988,
+            "upgrade": {
+                "group": 441,
+                "level": 4,
+                "max": 6,
+                "name": "Hero",
+                "fullName": "Hero 4/6",
+                "bonusId": 11988,
+                "itemLevel": 658,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11989,
+            "upgrade": {
+                "group": 441,
+                "level": 5,
+                "max": 6,
+                "name": "Hero",
+                "fullName": "Hero 5/6",
+                "bonusId": 11989,
+                "itemLevel": 662,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11990,
+            "upgrade": {
+                "group": 441,
+                "level": 6,
+                "max": 6,
+                "name": "Hero",
+                "fullName": "Hero 6/6",
+                "bonusId": 11990,
+                "itemLevel": 665,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11991,
+            "upgrade": {
+                "group": 442,
+                "level": 1,
+                "max": 6,
+                "name": "Myth",
+                "fullName": "Myth 1/6",
+                "bonusId": 11991,
+                "itemLevel": 662,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11992,
+            "upgrade": {
+                "group": 442,
+                "level": 2,
+                "max": 6,
+                "name": "Myth",
+                "fullName": "Myth 2/6",
+                "bonusId": 11992,
+                "itemLevel": 665,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11993,
+            "upgrade": {
+                "group": 442,
+                "level": 3,
+                "max": 6,
+                "name": "Myth",
+                "fullName": "Myth 3/6",
+                "bonusId": 11993,
+                "itemLevel": 668,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11994,
+            "upgrade": {
+                "group": 442,
+                "level": 4,
+                "max": 6,
+                "name": "Myth",
+                "fullName": "Myth 4/6",
+                "bonusId": 11994,
+                "itemLevel": 671,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 11995,
+            "quality": 4,
+            "upgrade": {
+                "group": 442,
+                "level": 5,
+                "max": 6,
+                "name": "Myth",
+                "fullName": "Myth 5/6",
+                "bonusId": 11995,
+                "itemLevel": 675,
+                "seasonId": 25
+            }
+        },
+        {
+            "id": 11996,
+            "quality": 4,
+            "upgrade": {
+                "group": 442,
+                "level": 6,
+                "max": 6,
+                "name": "Myth",
+                "fullName": "Myth 6/6",
+                "bonusId": 11996,
+                "itemLevel": 678,
+                "seasonId": 25
+            }
         }
     ],
 
@@ -1401,12 +1456,12 @@ export default {
     },
 
     upgradeMax: function (name) {
-        if (name === 'Explorer') { return 580 }
-        if (name === 'Adventurer') { return 593 }
-        if (name === 'Veteran') { return 606 }
-        if (name === 'Champion') { return 619 }
-        if (name === 'Hero') { return 626 }
-        if (name === 'Myth') { return 639 }
+        if (name === 'Explorer') { return 619 }
+        if (name === 'Adventurer') { return 632 }
+        if (name === 'Veteran') { return 645 }
+        if (name === 'Champion') { return 658 }
+        if (name === 'Hero') { return 665 }
+        if (name === 'Myth') { return 678 }
         //if (name === 'Awakened') { return 528 }
     }
 }
