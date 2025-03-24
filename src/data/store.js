@@ -85,7 +85,7 @@ export default new Vuex.Store({
       state.statistics.max = state.statistics.datapoints[state.statistics.datapoints.length - 1]
 
       var count = state.statistics.datapoints.length
-      var outlierLength = Math.floor(count * 0.1)
+      var outlierLength = Math.floor(count * 0.01)
 
       state.statistics.curveBottom = state.statistics.datapoints[outlierLength]
       state.statistics.curveTop = state.statistics.datapoints[count - outlierLength]
@@ -441,10 +441,6 @@ const currentRaid = [
     realm: 'Whisperwind'
   },
 
-  {
-    name: 'Arandir',
-    realm: 'Whisperwind'
-  },
    
 ]
 
