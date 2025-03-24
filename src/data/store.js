@@ -436,10 +436,6 @@ const currentRaid = [
     realm: 'Whisperwind'
   },
 
-  {
-    name: 'Myrym',
-    realm: 'Whisperwind'
-  },
 
    
 ]
