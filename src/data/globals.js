@@ -1283,9 +1283,9 @@ export default {
             "upgrade": {
                 "group": 441,
                 "level": 1,
-                "max": 6,
+                "max": 8,
                 "name": "Hero",
-                "fullName": "Hero 1/6",
+                "fullName": "Hero 1/8",
                 "bonusId": 11985,
                 "itemLevel": 649,
                 "seasonId": 25
@@ -1297,9 +1297,9 @@ export default {
             "upgrade": {
                 "group": 441,
                 "level": 2,
-                "max": 6,
+                "max": 8,
                 "name": "Hero",
-                "fullName": "Hero 2/6",
+                "fullName": "Hero 2/8",
                 "bonusId": 11986,
                 "itemLevel": 652,
                 "seasonId": 25
@@ -1311,9 +1311,9 @@ export default {
             "upgrade": {
                 "group": 441,
                 "level": 3,
-                "max": 6,
+                "max": 8,
                 "name": "Hero",
-                "fullName": "Hero 3/6",
+                "fullName": "Hero 3/8",
                 "bonusId": 11987,
                 "itemLevel": 655,
                 "seasonId": 25
@@ -1325,9 +1325,9 @@ export default {
             "upgrade": {
                 "group": 441,
                 "level": 4,
-                "max": 6,
+                "max": 8,
                 "name": "Hero",
-                "fullName": "Hero 4/6",
+                "fullName": "Hero 4/8",
                 "bonusId": 11988,
                 "itemLevel": 658,
                 "seasonId": 25
@@ -1339,9 +1339,9 @@ export default {
             "upgrade": {
                 "group": 441,
                 "level": 5,
-                "max": 6,
+                "max": 8,
                 "name": "Hero",
-                "fullName": "Hero 5/6",
+                "fullName": "Hero 5/8",
                 "bonusId": 11989,
                 "itemLevel": 662,
                 "seasonId": 25
@@ -1353,9 +1353,9 @@ export default {
             "upgrade": {
                 "group": 441,
                 "level": 6,
-                "max": 6,
+                "max": 8,
                 "name": "Hero",
-                "fullName": "Hero 6/6",
+                "fullName": "Hero 6/8",
                 "bonusId": 11990,
                 "itemLevel": 665,
                 "seasonId": 25
@@ -1367,9 +1367,9 @@ export default {
             "upgrade": {
                 "group": 442,
                 "level": 1,
-                "max": 6,
+                "max": 8,
                 "name": "Myth",
-                "fullName": "Myth 1/6",
+                "fullName": "Myth 1/8",
                 "bonusId": 11991,
                 "itemLevel": 662,
                 "seasonId": 25
@@ -1381,9 +1381,9 @@ export default {
             "upgrade": {
                 "group": 442,
                 "level": 2,
-                "max": 6,
+                "max": 8,
                 "name": "Myth",
-                "fullName": "Myth 2/6",
+                "fullName": "Myth 2/8",
                 "bonusId": 11992,
                 "itemLevel": 665,
                 "seasonId": 25
@@ -1395,9 +1395,9 @@ export default {
             "upgrade": {
                 "group": 442,
                 "level": 3,
-                "max": 6,
+                "max": 8,
                 "name": "Myth",
-                "fullName": "Myth 3/6",
+                "fullName": "Myth 3/8",
                 "bonusId": 11993,
                 "itemLevel": 668,
                 "seasonId": 25
@@ -1409,9 +1409,9 @@ export default {
             "upgrade": {
                 "group": 442,
                 "level": 4,
-                "max": 6,
+                "max": 8,
                 "name": "Myth",
-                "fullName": "Myth 4/6",
+                "fullName": "Myth 4/8",
                 "bonusId": 11994,
                 "itemLevel": 671,
                 "seasonId": 25
@@ -1424,9 +1424,9 @@ export default {
             "upgrade": {
                 "group": 442,
                 "level": 5,
-                "max": 6,
+                "max": 8,
                 "name": "Myth",
-                "fullName": "Myth 5/6",
+                "fullName": "Myth 5/8",
                 "bonusId": 11995,
                 "itemLevel": 675,
                 "seasonId": 25
@@ -1438,14 +1438,71 @@ export default {
             "upgrade": {
                 "group": 442,
                 "level": 6,
-                "max": 6,
+                "max": 8,
                 "name": "Myth",
-                "fullName": "Myth 6/6",
+                "fullName": "Myth 6/8",
                 "bonusId": 11996,
                 "itemLevel": 678,
                 "seasonId": 25
             }
+        },
+        {
+            "id": 12371,
+            "upgrade": {
+                "group": 441,
+                "level": 7,
+                "max": 8,
+                "name": "Hero",
+                "fullName": "Hero 7/8",
+                "bonusId": 12371,
+                "itemLevel": 668,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 12372,
+            "upgrade": {
+                "group": 441,
+                "level": 8,
+                "max": 8,
+                "name": "Hero",
+                "fullName": "Hero 8/8",
+                "bonusId": 12372,
+                "itemLevel": 671,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 12375,
+            "upgrade": {
+                "group": 442,
+                "level": 7,
+                "max": 8,
+                "name": "Myth",
+                "fullName": "Myth 7/8",
+                "bonusId": 12375,
+                "itemLevel": 681,
+                "seasonId": 25
+            },
+            "quality": 4
+        },
+        {
+            "id": 12376,
+            "upgrade": {
+                "group": 442,
+                "level": 8,
+                "max": 8,
+                "name": "Myth",
+                "fullName": "Myth 8/8",
+                "bonusId": 12376,
+                "itemLevel": 684,
+                "seasonId": 25
+            },
+            "quality": 4
         }
+    
     ],
 
     itemBonusIds: function () {
@@ -1460,8 +1517,8 @@ export default {
         if (name === 'Adventurer') { return 632 }
         if (name === 'Veteran') { return 645 }
         if (name === 'Champion') { return 658 }
-        if (name === 'Hero') { return 665 }
-        if (name === 'Myth') { return 678 }
+        if (name === 'Hero') { return 671 }
+        if (name === 'Myth') { return 684 }
         //if (name === 'Awakened') { return 528 }
     }
 }
